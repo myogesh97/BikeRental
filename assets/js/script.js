@@ -87,58 +87,56 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Owl Slider JS
 
-$(document).ready(function () {
-  var loop = true;
+$("#carousel").owlCarousel({
+  autoplay: false,
+  rewind: false,
+  animateOut: "fadeOut",
+  animateIn: "fadeIn",
+  responsiveClass: true,
+  autoHeight: true,
+  autoplayTimeout: 5000,
+  smartSpeed: 1000,
+  nav: true,
+  items: 1,
+  navSpeed: 1000,
+  loop: true,
+  dots: false,
+  mouseDrag: false,
+  pullDrag: false,
+  navText : ["<ion-icon name='chevron-back-outline'></ion-icon>","<ion-icon name='chevron-forward-outline'></ion-icon>"],
+});
 
-  function addSiblingClass(event) {
-    var index = event.item.index;
-    var stage = event.relatedTarget.$stage;
+document.addEventListener("scroll", () => {
+  const items = document.querySelectorAll(".hero-bannerSection-Box .owl-carousel .item");
 
-    if (stage) {
-      var items = stage.find(".owl-item");
-      stage.find(".sibling").removeClass("sibling");
-      stage.find(".mirror-active").removeClass("mirror-active");
+  items.forEach(item => {
+    const img = item.querySelector("img");
+    if (img) {
+      const scrollY = window.scrollY;
+      const offsetTop = item.offsetTop;
+      const height = item.offsetHeight;
+      const inView = scrollY + window.innerHeight > offsetTop && scrollY < offsetTop + height;
 
-      items.eq(index - 1).addClass("sibling");
-      items.eq(index + 1).addClass("sibling");
-
-      if (loop) {
-        var mirrorActive = null;
-        var clonedItems = Math.ceil(event.item.count / 2);
-        clonedItems = clonedItems < 2 ? 2 : clonedItems;
-
-        if (index === clonedItems - 1) {
-          mirrorActive = items.length - (clonedItems + 1);
-        } else if (index === items.length - (clonedItems + 1)) {
-          mirrorActive = clonedItems - 1;
-        }
-
-        if (mirrorActive) {
-          items.eq(mirrorActive - 1).addClass("sibling");
-          items.eq(mirrorActive).addClass("mirror-active");
-          items.eq(mirrorActive + 1).addClass("sibling");
-        }
+      if (inView) {
+        const percent = (scrollY - offsetTop) / height;
+        img.style.transform = `translateY(${percent * 150}px)`; // adjust strength here
       }
     }
-  }
-
-  $("#carousel").owlCarousel({
-    items: 1,
-    nav: true,
-    dots: false,
-    mouseDrag: false,
-    pullDrag: false,
-    autoplay: true,
-    responsiveClass: true,
-    autoHeight: true,
-    autoplayTimeout: 5000,
-    smartSpeed: 1000,
-    loop: loop,
-    navSpeed: 1000,
-    animateIn: "fadeIn",
-    animateOut: "fadeOut",
-    onInitialized: addSiblingClass,
-    onChanged: addSiblingClass,
-    navText: ["", ""],
   });
+});
+
+$("#carousel1").owlCarousel({
+  autoplay: true,
+  rewind: false,
+  responsiveClass: true,
+  autoHeight: true,
+  autoplayTimeout: 5000,
+  smartSpeed: 3000,
+  nav: true,
+  items: 1,
+  navSpeed: 1000,
+  dots: false,
+  loop: true,
+  mouseDrag: true,
+  pullDrag: false,
 });
