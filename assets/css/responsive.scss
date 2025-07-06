@@ -55,3 +55,16 @@ only screen and (min-device-pixel-ratio: 1.5) {}
 
 /* iPad Landscape */
 @media screen and (min-device-width: 481px) and (orientation:landscape) {}
+
+
+@media (min-width: 1400px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1650px;
+    }
+}

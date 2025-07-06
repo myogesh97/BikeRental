@@ -1,4 +1,5 @@
 @use "./style";
+@use "./navbar";
 @use "./responsive";
 
 * {
@@ -10,9 +11,11 @@
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+    height: 10000rem;
 }
 
 body {
+    background-color: #1a1a1a;
     overflow-x: hidden;
     color: #333;
     line-height: 1.6;
@@ -38,6 +41,7 @@ input[type=button] {
 a:hover,
 a:focus {
     text-decoration: none;
+    color: #e81938;
 }
 
 .btn.focus,
@@ -71,18 +75,24 @@ select {
     background-color: transparent;
 }
 
+ul {
+    margin: 0;
+}
+
 .btn {
     padding: 1rem 2.4rem;
     outline: none;
     box-shadow: none;
-    border: 1px solid transparent;
+    border: 1px solid #e81938;
     font-size: 1.8rem;
-    border-radius: .6rem;
-    background-color: #f97436;
+    border-radius: 0;
+    background-color: #e81938;
     color: #fff;
 
     &:hover {
-        border-color: #f97436;
+        border-color: #e81938;
+        background-color: #fff;
+        color: #e81938;
     }
 }
 
@@ -106,11 +116,11 @@ select {
 }
 
 .form-control::-moz-placeholder {
-    color: #f97436;
+    color: #e81938;
 }
 
 .form-control::placeholder {
-    color: #f97436;
+    color: #e81938;
 }
 
 textarea.form-control {
