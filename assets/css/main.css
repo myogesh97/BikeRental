@@ -1,0 +1,148 @@
+/*------------------------------------------
+    Responsive Grid Media Queries - 1280, 1024, 768, 480
+     1280-1024   - desktop (default grid)
+     1024-768    - tablet landscape
+     768-480     - tablet 
+     480-less    - phone landscape & smaller
+  --------------------------------------------*/
+/* Portrait */
+@media screen and (orientation: portrait) {
+  /* Portrait styles here */
+}
+/* Landscape */
+@media screen and (orientation: landscape) {
+  /* Landscape styles here */
+}
+/* CSS for iPhone, iPad, and Retina Displays */
+/* Non-Retina */
+/* Retina */
+/* iPhone Portrait */
+/* iPhone Landscape */
+/* iPad Portrait */
+/* iPad Landscape */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  color: #333;
+  line-height: 1.6;
+  font-weight: normal;
+  font-size: initial;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+a,
+button,
+input[type=reset],
+input[type=submit],
+input[type=button] {
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+.btn.focus,
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+button:hover,
+button:focus,
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #1f1f1f;
+}
+
+button,
+select {
+  border: none;
+  background-color: transparent;
+}
+
+.btn {
+  padding: 1rem 2.4rem;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid transparent;
+  font-size: 1.8rem;
+  border-radius: 0.6rem;
+  background-color: #f97436;
+  color: #fff;
+}
+.btn:hover {
+  border-color: #f97436;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-group > label {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #3f475b;
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  height: 4rem;
+  border: 1px solid v #e3e3e3;
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
+  font-size: 1.6rem;
+}
+
+.form-control::-moz-placeholder {
+  color: #f97436;
+}
+
+.form-control::placeholder {
+  color: #f97436;
+}
+
+textarea.form-control {
+  padding: 1.8rem 2rem;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/*# sourceMappingURL=main.css.map */
