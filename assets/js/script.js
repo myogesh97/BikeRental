@@ -126,7 +126,7 @@ document.addEventListener("scroll", () => {
 });
 
 $("#carousel1").owlCarousel({
-  autoplay: true,
+  autoplay: false,
   rewind: false,
   responsiveClass: true,
   autoHeight: true,
@@ -139,4 +139,5 @@ $("#carousel1").owlCarousel({
   loop: true,
   mouseDrag: true,
   pullDrag: false,
+  navText : ["<ion-icon name='chevron-back-outline'></ion-icon>","<ion-icon name='chevron-forward-outline'></ion-icon>"],
 });

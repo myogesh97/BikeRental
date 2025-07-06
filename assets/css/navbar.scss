@@ -4,8 +4,10 @@
     left: 0;
     width: 100%;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-
+    border-bottom: 1px solid #ffffff47;
+    .container {
+        max-width: 1650px;
+    }
 
 }
 
@@ -166,14 +168,15 @@
 .nav-link {
     color: #ffffff;
     text-decoration: none;
-    font-weight: 500;
     padding: 0.5rem 1rem;
     border-radius: 12px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: center;
     gap: 5px;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: .4px;
 
     &:focus {
         color: #fff;
