@@ -104,6 +104,23 @@ $("#carousel").owlCarousel({
   mouseDrag: false,
   pullDrag: false,
   navText : ["<ion-icon name='chevron-back-outline'></ion-icon>","<ion-icon name='chevron-forward-outline'></ion-icon>"],
+   responsive: {
+    0: {
+      items: 1
+    },
+
+    600: {
+      items: 1
+    },
+
+    1024: {
+      items: 1
+    },
+
+    1366: {
+      items: 1
+    }
+  }
 });
 
 document.addEventListener("scroll", () => {

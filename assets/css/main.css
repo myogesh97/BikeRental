@@ -51,6 +51,7 @@
 
 .hero-bannerSection-Box {
   padding-top: 4.5rem;
+  overflow: hidden;
 }
 .hero-bannerSection-Box .owl-stage-outer {
   overflow: visible;
@@ -688,7 +689,7 @@
   cursor: pointer;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
+  border-radius: 4px;
   padding: 0.6rem;
   transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -716,6 +717,7 @@
 .hamburger span:nth-child(2) {
   top: 9px;
   width: 70%;
+  right: 0;
 }
 .hamburger span:last-child {
   top: 18px;
@@ -830,6 +832,14 @@
      768-480     - tablet 
      480-less    - phone landscape & smaller
   --------------------------------------------*/
+@media all and (max-width: 480px) {
+  .sub-header {
+    display: none;
+  }
+  .hero-bannerSection-Box {
+    padding-top: 0;
+  }
+}
 /* Portrait */
 @media screen and (orientation: portrait) {
   /* Portrait styles here */

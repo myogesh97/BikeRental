@@ -60,6 +60,7 @@
 
 .hero-bannerSection-Box {
     padding-top: 4.5rem;
+    overflow: hidden;
 
     .owl-stage-outer {
         overflow: visible;
@@ -547,7 +548,7 @@ $anim-speed: 0.3s;
 // Event Section
 
 .event-section {
-    .no_event-text{
+    .no_event-text {
         display: block;
         font-family: "Noto Sans", sans-serif;
         color: #fff;
