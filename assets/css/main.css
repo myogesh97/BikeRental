@@ -187,7 +187,7 @@
   outline: none;
 }
 
-.info-banner-section .col {
+.info-banner-section .row .col-lg-6 {
   padding: 0;
 }
 .info-banner-section .info-inner-content {

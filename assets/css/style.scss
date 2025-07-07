@@ -235,8 +235,10 @@
 
 .info-banner-section {
 
-    .col {
-        padding: 0;
+    .row {
+        .col-lg-6 {
+            padding: 0;
+        }
     }
 
     .info-inner-content {
