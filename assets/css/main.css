@@ -262,6 +262,11 @@
   font-weight: 300;
   line-height: 32px;
 }
+.our-ride-section .our-ride-content .content-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .section-background {
   background-attachment: fixed;
@@ -367,6 +372,7 @@
   height: 39rem;
   overflow: hidden;
   box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.3);
+  margin-bottom: 2rem;
 }
 .our-team-section .profile-card img {
   width: 100%;
@@ -452,7 +458,6 @@
   background-size: cover;
   background-position: bottom center;
   background-repeat: no-repeat;
-  /* Responsive padding adjustment for the whole section */
 }
 .stats-section .container {
   max-width: 100rem;
@@ -494,9 +499,9 @@
     grid-template-columns: 1fr;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .stats-section {
-    padding-bottom: 300px;
+    padding-bottom: 10rem;
   }
 }
 
@@ -532,9 +537,14 @@
   gap: 4rem;
   display: flex;
 }
-@media all and (max-width: 480px) {
+@media all and (max-width: 1200px) {
   .site-footer .footer-main .contact-info {
     flex-wrap: wrap;
+  }
+}
+@media all and (max-width: 576px) {
+  .site-footer .footer-main .contact-info {
+    gap: 0rem;
   }
 }
 .site-footer .footer-main .contact-info p {
@@ -693,10 +703,6 @@
   .site-footer .footer-main .footer-grid {
     grid-template-columns: 1fr;
   }
-  .site-footer .footer-bottom .footer-bottom-content {
-    flex-direction: column;
-    gap: 20px;
-  }
 }
 
 .header {
@@ -821,6 +827,7 @@
   gap: 1.5rem;
   list-style: none;
   align-items: center;
+  padding: 0;
 }
 .nav-menu .nav-list .nav-item {
   position: relative;
@@ -991,13 +998,43 @@
   top: 9px;
 }
 
+/*------------------------------------------
+    Responsive Grid Media Queries - 1280, 1024, 768, 480
+     1280-1024   - desktop (default grid)
+     1024-768    - tablet landscape
+     768-480     - tablet 
+     480-less    - phone landscape & smaller
+  --------------------------------------------*/
+@media all and (min-width: 576px) and (max-width: 768px) {
+  .info-banner-section .info-below-content {
+    margin: 0 4rem;
+    padding: 4rem 0;
+  }
+  .info-banner-section .info-inner-content .info-content {
+    bottom: 2rem;
+    left: 4rem;
+  }
+  .our-ride-section .our-ride-content .content-img {
+    height: 26rem;
+  }
+  .our-ride-section .our-ride-content .content-text {
+    padding: 4rem 2rem 1rem;
+  }
+  .owl-carousel.hero-bannerSection .item .text-content-shell .text-content {
+    padding: 4rem;
+    text-align: center;
+  }
+  .nav-active .nav-menu {
+    width: 100%;
+  }
+}
 @media (max-width: 968px) {
   .nav-toggle {
     display: flex;
   }
   .nav-menu {
     position: fixed;
-    top: 10rem;
+    top: 14rem;
     right: -140%;
     flex-direction: column;
     align-items: flex-start;
@@ -1072,27 +1109,139 @@
     transform: rotate(180deg);
   }
 }
-@media (max-width: 576px) {
+@media all and (max-width: 768px) {
   .navbar {
     padding: 1rem;
+  }
+}
+@media all and (max-width: 576px) {
+  .section-padding {
+    padding: 6rem 0;
+  }
+  .navbar {
+    min-height: 8rem;
   }
   .nav-menu {
     width: 100%;
   }
-}
-/*------------------------------------------
-    Responsive Grid Media Queries - 1280, 1024, 768, 480
-     1280-1024   - desktop (default grid)
-     1024-768    - tablet landscape
-     768-480     - tablet 
-     480-less    - phone landscape & smaller
-  --------------------------------------------*/
-@media all and (max-width: 480px) {
   .sub-header {
-    display: none;
+    padding: 0.5rem;
+  }
+  .sub-header .sub-headerInner {
+    flex-direction: column;
+    gap: 0;
+  }
+  .sub-header .sub-headerInner .content-right {
+    gap: 2rem;
   }
   .hero-bannerSection-Box {
     padding-top: 0;
+  }
+  .owl-carousel.hero-bannerSection {
+    height: 750px;
+  }
+  .owl-carousel.hero-bannerSection .item .text-content-shell .text-content {
+    padding: 4rem;
+    text-align: center;
+  }
+  .owl-carousel.hero-bannerSection .item .text-content-shell .text-content h1 {
+    font-size: 6rem;
+    margin-bottom: 4rem;
+  }
+  .owl-carousel.hero-bannerSection .owl-nav button.owl-prev,
+  .owl-carousel.hero-bannerSection .owl-nav button.owl-next {
+    font-size: 4rem;
+    height: 5rem;
+    width: 5rem;
+  }
+  .owl-carousel.hero-bannerSection .owl-nav button.owl-prev {
+    left: 0rem;
+  }
+  .owl-carousel.hero-bannerSection .owl-nav button.owl-next {
+    right: 0rem;
+  }
+  .section-primary_title h2 {
+    font-size: 6rem;
+  }
+  .section-secondary_title {
+    margin-bottom: 6rem;
+    text-align: center;
+  }
+  .section-secondary_title h2 {
+    font-size: 3.4rem;
+  }
+  .section-secondary_title p {
+    margin: 1rem 0;
+    font-size: 1.6rem;
+  }
+  .info-banner-section .info-below-content {
+    margin: 0 2rem 2rem;
+    padding: 4rem 0;
+  }
+  .info-banner-section .info-below-content p {
+    font-size: 1.4rem;
+  }
+  .info-banner-section .info-inner-content .info-content {
+    bottom: 2rem;
+    left: 2rem;
+  }
+  .info-banner-section .info-inner-content .info-content h2 {
+    font-size: 3rem;
+  }
+  .sm-order-2 {
+    order: 2;
+  }
+  .our-ride-section .our-ride-content {
+    margin-bottom: 2rem;
+  }
+  .testimonial-section .section-primary_title {
+    text-align: center;
+  }
+  .testimonial-section .owl-carousel .text-content-shell {
+    padding: 3rem;
+  }
+  .testimonial-section .owl-carousel .text-content-shell p {
+    font-size: 1.6rem;
+    -webkit-line-clamp: 5;
+  }
+  .testimonial-section .owl-carousel .owl-nav {
+    display: none;
+  }
+  .our-team-section {
+    padding-top: 25rem;
+  }
+  .our-team-section .section-primary_title {
+    text-align: center;
+  }
+  .our-team-section .section-primary_title .desk-none {
+    display: inline-block;
+  }
+  .our-team-section .profile-card {
+    height: 45rem;
+    width: calc(100% - 4rem);
+    margin: 0 auto 3rem;
+  }
+  .site-footer .footer-main {
+    padding: 6rem 0 2rem;
+  }
+  .site-footer .footer-main .widget-title {
+    font-size: 4rem;
+  }
+  .site-footer .footer-widget {
+    margin-bottom: 2rem;
+  }
+  .site-footer .footer-bottom {
+    padding: 2rem 0;
+  }
+  .site-footer .footer-bottom .copyright-text p {
+    text-align: center;
+  }
+  .site-footer .footer-bottom .social-media {
+    justify-content: center;
+  }
+  .footer-bottom .footer-bottom-content {
+    flex-direction: column;
+    gap: 20px;
   }
 }
 /* Portrait */
@@ -1251,6 +1400,10 @@ input[type=number]::-webkit-inner-spin-button {
 
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+.desk-none {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */

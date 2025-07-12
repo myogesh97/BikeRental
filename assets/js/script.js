@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (window.innerWidth <= 968) {
         e.preventDefault();
         dropdown.classList.toggle("active");
-        
+
         dropdowns.forEach((other) => {
           if (other !== dropdown && other.classList.contains("active")) {
             other.classList.remove("active");
@@ -100,37 +100,44 @@ $("#carousel").owlCarousel({
   dots: false,
   mouseDrag: false,
   pullDrag: false,
-  touchDrag:false,
-  navText : ["<ion-icon name='chevron-back-outline'></ion-icon>","<ion-icon name='chevron-forward-outline'></ion-icon>"],
-   responsive: {
+  touchDrag: false,
+  navText: [
+    "<ion-icon name='chevron-back-outline'></ion-icon>",
+    "<ion-icon name='chevron-forward-outline'></ion-icon>",
+  ],
+  responsive: {
     0: {
-      items: 1
+      items: 1,
     },
 
     600: {
-      items: 1
+      items: 1,
     },
 
     1024: {
-      items: 1
+      items: 1,
     },
 
     1366: {
-      items: 1
-    }
-  }
+      items: 1,
+    },
+  },
 });
 
 document.addEventListener("scroll", () => {
-  const items = document.querySelectorAll(".hero-bannerSection-Box .owl-carousel .item");
+  const items = document.querySelectorAll(
+    ".hero-bannerSection-Box .owl-carousel .item"
+  );
 
-  items.forEach(item => {
+  items.forEach((item) => {
     const img = item.querySelector("img");
     if (img) {
       const scrollY = window.scrollY;
       const offsetTop = item.offsetTop;
       const height = item.offsetHeight;
-      const inView = scrollY + window.innerHeight > offsetTop && scrollY < offsetTop + height;
+      const inView =
+        scrollY + window.innerHeight > offsetTop &&
+        scrollY < offsetTop + height;
 
       if (inView) {
         const percent = (scrollY - offsetTop) / height;
@@ -154,8 +161,37 @@ $("#carousel1").owlCarousel({
   loop: true,
   mouseDrag: true,
   pullDrag: false,
-  touchDrag:false,
-  navText : ["<ion-icon name='chevron-back-outline'></ion-icon>","<ion-icon name='chevron-forward-outline'></ion-icon>"],
+  touchDrag: false,
+  navText: [
+    "<ion-icon name='chevron-back-outline'></ion-icon>",
+    "<ion-icon name='chevron-forward-outline'></ion-icon>",
+  ],
+  responsive: {
+    0: {
+      items: 1,
+      autoplay: true,
+      mouseDrag: true,
+      pullDrag: true,
+      touchDrag: true,
+    },
+
+    576: {
+      items: 1,
+      autoplay: true,
+      mouseDrag: true,
+      pullDrag: true,
+      touchDrag: true,
+    },
+
+    1024: {
+      items: 1,
+      autoplay: true,
+    },
+
+    1366: {
+      items: 1,
+    },
+  },
 });
 
 $("#carousel2").owlCarousel({
@@ -172,95 +208,99 @@ $("#carousel2").owlCarousel({
   loop: true,
   mouseDrag: true,
   pullDrag: false,
-  touchDrag:false,
-  navText : ["<ion-icon name='chevron-back-outline'></ion-icon>","<ion-icon name='chevron-forward-outline'></ion-icon>"],
+  touchDrag: false,
+  navText: [
+    "<ion-icon name='chevron-back-outline'></ion-icon>",
+    "<ion-icon name='chevron-forward-outline'></ion-icon>",
+  ],
   responsive: {
     0: {
-      items: 2
+      items: 2,
     },
 
-    600: {
-      items: 4
+    576: {
+      items: 2,
     },
 
     1024: {
-      items: 5
+      items: 5,
     },
 
     1366: {
-      items: 6
-    }
-  }
+      items: 6,
+    },
+  },
 });
-
 
 // Stats Js
 
 document.addEventListener("DOMContentLoaded", () => {
-    const counters = document.querySelectorAll('.stat-number');
-    const speed = 200; // The lower the number, the faster the count
+  const counters = document.querySelectorAll(".stat-number");
+  const speed = 200; // The lower the number, the faster the count
 
-    const animateCounter = (counter) => {
-        const target = +counter.getAttribute('data-target');
-        const updateCount = () => {
-            const count = +counter.innerText.replace(/,/g, '');
-            const increment = target / speed;
+  const animateCounter = (counter) => {
+    const target = +counter.getAttribute("data-target");
+    const updateCount = () => {
+      const count = +counter.innerText.replace(/,/g, "");
+      const increment = target / speed;
 
-            if (count < target) {
-                const newCount = Math.ceil(count + increment);
-                counter.innerText = newCount.toLocaleString('en-IN');
-                setTimeout(updateCount, 15);
-            } else {
-                counter.innerText = target.toLocaleString('en-IN');
-            }
-        };
-        updateCount();
+      if (count < target) {
+        const newCount = Math.ceil(count + increment);
+        counter.innerText = newCount.toLocaleString("en-IN");
+        setTimeout(updateCount, 15);
+      } else {
+        counter.innerText = target.toLocaleString("en-IN");
+      }
     };
+    updateCount();
+  };
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateCounter(entry.target);
-                observer.unobserve(entry.target); 
-            }
-        });
-    }, {
-        threshold: 0.5
-    });
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.5,
+    }
+  );
 
-    counters.forEach(counter => {
-        observer.observe(counter);
-    });
+  counters.forEach((counter) => {
+    observer.observe(counter);
+  });
 });
 
 // Scroll To Top JS
 
 document.addEventListener("DOMContentLoaded", () => {
-    const scrollToTopButton = document.querySelector(".scroll-to-top-button");
+  const scrollToTopButton = document.querySelector(".scroll-to-top-button");
 
-    if (scrollToTopButton) {
-        
-        const toggleButtonVisibility = () => {
-            if (window.scrollY > 300) {
-                scrollToTopButton.classList.add("is-visible");
-            } else {
-                scrollToTopButton.classList.remove("is-visible");
-            }
-        };
+  if (scrollToTopButton) {
+    const toggleButtonVisibility = () => {
+      if (window.scrollY > 300) {
+        scrollToTopButton.classList.add("is-visible");
+      } else {
+        scrollToTopButton.classList.remove("is-visible");
+      }
+    };
 
-        const scrollToTop = (event) => {
-            event.preventDefault(); 
-            
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        };
-        
-        window.addEventListener("scroll", toggleButtonVisibility);
+    const scrollToTop = (event) => {
+      event.preventDefault();
 
-        scrollToTopButton.addEventListener("click", scrollToTop);
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
 
-        toggleButtonVisibility();
-    }
+    window.addEventListener("scroll", toggleButtonVisibility);
+
+    scrollToTopButton.addEventListener("click", scrollToTop);
+
+    toggleButtonVisibility();
+  }
 });
