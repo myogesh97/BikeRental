@@ -777,6 +777,7 @@
   min-height: 10rem;
   display: flex;
   justify-content: space-between;
+  padding: 1rem;
   align-items: center;
   -webkit-backdrop-filter: saturate(180%) blur(10px);
   transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1005,6 +1006,11 @@
      768-480     - tablet 
      480-less    - phone landscape & smaller
   --------------------------------------------*/
+@media all and (max-width: 1024px) {
+  .owl-carousel.hero-bannerSection .item .text-content-shell .text-content {
+    padding: 4rem 10rem;
+  }
+}
 @media all and (min-width: 576px) and (max-width: 768px) {
   .info-banner-section .info-below-content {
     margin: 0 4rem;
@@ -1107,11 +1113,6 @@
   }
   .has-dropdown.active .chevron-icon {
     transform: rotate(180deg);
-  }
-}
-@media all and (max-width: 768px) {
-  .navbar {
-    padding: 1rem;
   }
 }
 @media all and (max-width: 576px) {
