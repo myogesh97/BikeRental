@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   navToggle.addEventListener("click", () => {
     navbar.classList.toggle("nav-active");
+    // Prevent scrolling when mobile nav is open
     document.body.style.overflow = navbar.classList.contains("nav-active")
       ? "hidden"
       : "";
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (window.innerWidth <= 968) {
         e.preventDefault();
         dropdown.classList.toggle("active");
+        
         dropdowns.forEach((other) => {
           if (other !== dropdown && other.classList.contains("active")) {
             other.classList.remove("active");
@@ -33,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 300);
           }
         });
+
         const currentDropdown = dropdown.querySelector(".dropdown");
         if (dropdown.classList.contains("active")) {
           currentDropdown.style.animation = "slideDown 0.3s forwards";
@@ -54,34 +57,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  window.addEventListener("scroll", () => {
+  const handleScrollClass = () => {
     navbar.classList.toggle("scrolled", window.scrollY > 50);
-  });
+  };
+
+  window.addEventListener("scroll", handleScrollClass);
+
+  handleScrollClass();
 
   const style = document.createElement("style");
   style.textContent = `
-        @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+    .scrolled {
+        padding: 0.7rem 2rem;
+        background-color: #1f1f1f82;
+        backdrop-filter: blur(5px);
+    }
 
-        @keyframes slideUp {
-            from { opacity: 1; transform: translateY(0); }
-            to { opacity: 0; transform: translateY(-10px); }
-        }
-
+    @media (max-width: 576px) {
         .scrolled {
-            padding: 0.7rem 2rem;
-            background-color: #1f1f1f82;
-            backdrop-filter: blur(5px);
+            padding: 0.7rem 1rem;
         }
-
-        @media (max-width: 576px) {
-            .scrolled {
-                padding: 0.7rem 1rem;
-            }
-        }
-    `;
+    }
+  `;
   document.head.appendChild(style);
 });
 
@@ -161,6 +158,41 @@ $("#carousel1").owlCarousel({
   navText : ["<ion-icon name='chevron-back-outline'></ion-icon>","<ion-icon name='chevron-forward-outline'></ion-icon>"],
 });
 
+$("#carousel2").owlCarousel({
+  autoplay: true,
+  rewind: false,
+  responsiveClass: true,
+  autoHeight: true,
+  autoplayTimeout: 2500,
+  smartSpeed: 1500,
+  nav: false,
+  items: 1,
+  navSpeed: 1000,
+  dots: false,
+  loop: true,
+  mouseDrag: true,
+  pullDrag: false,
+  touchDrag:false,
+  navText : ["<ion-icon name='chevron-back-outline'></ion-icon>","<ion-icon name='chevron-forward-outline'></ion-icon>"],
+  responsive: {
+    0: {
+      items: 2
+    },
+
+    600: {
+      items: 4
+    },
+
+    1024: {
+      items: 5
+    },
+
+    1366: {
+      items: 6
+    }
+  }
+});
+
 
 // Stats Js
 
@@ -199,4 +231,36 @@ document.addEventListener("DOMContentLoaded", () => {
     counters.forEach(counter => {
         observer.observe(counter);
     });
+});
+
+// Scroll To Top JS
+
+document.addEventListener("DOMContentLoaded", () => {
+    const scrollToTopButton = document.querySelector(".scroll-to-top-button");
+
+    if (scrollToTopButton) {
+        
+        const toggleButtonVisibility = () => {
+            if (window.scrollY > 300) {
+                scrollToTopButton.classList.add("is-visible");
+            } else {
+                scrollToTopButton.classList.remove("is-visible");
+            }
+        };
+
+        const scrollToTop = (event) => {
+            event.preventDefault(); 
+            
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+        
+        window.addEventListener("scroll", toggleButtonVisibility);
+
+        scrollToTopButton.addEventListener("click", scrollToTop);
+
+        toggleButtonVisibility();
+    }
 });

@@ -5,6 +5,7 @@
     width: 100%;
     z-index: 1000;
     border-bottom: 1px solid #ffffff47;
+
     .container {
         max-width: 1650px;
     }
@@ -243,6 +244,7 @@
             margin-bottom: 2px;
             font-size: 1.4rem;
             margin-right: 1rem;
+            font-family: "Noto Sans", sans-serif;
 
             &:hover {
                 background: rgba(33, 150, 243, 0.15);
