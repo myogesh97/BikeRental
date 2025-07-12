@@ -160,3 +160,43 @@ $("#carousel1").owlCarousel({
   touchDrag:false,
   navText : ["<ion-icon name='chevron-back-outline'></ion-icon>","<ion-icon name='chevron-forward-outline'></ion-icon>"],
 });
+
+
+// Stats Js
+
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll('.stat-number');
+    const speed = 200; // The lower the number, the faster the count
+
+    const animateCounter = (counter) => {
+        const target = +counter.getAttribute('data-target');
+        const updateCount = () => {
+            const count = +counter.innerText.replace(/,/g, '');
+            const increment = target / speed;
+
+            if (count < target) {
+                const newCount = Math.ceil(count + increment);
+                counter.innerText = newCount.toLocaleString('en-IN');
+                setTimeout(updateCount, 15);
+            } else {
+                counter.innerText = target.toLocaleString('en-IN');
+            }
+        };
+        updateCount();
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                observer.unobserve(entry.target); 
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    counters.forEach(counter => {
+        observer.observe(counter);
+    });
+});
