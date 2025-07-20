@@ -510,6 +510,14 @@
   }
 }
 
+.image-slider-only .owl-item .item {
+  height: 100%;
+}
+.image-slider-only .owl-item img {
+  height: 100%;
+  object-fit: cover;
+}
+
 .site-footer {
   background-color: #1a1a1a;
   color: #a0a0a0;

@@ -438,6 +438,7 @@
                 top: initial;
                 bottom: 6.5rem;
                 background-color: #fff;
+
                 &:hover {
                     color: #c40000;
                     border-color: #c40000;
@@ -624,6 +625,20 @@
 
     @media (max-width: 576px) {
         padding-bottom: 10rem;
+    }
+}
+
+// Image Slider Section
+.image-slider-only {
+    .owl-item {
+        .item {
+            height: 100%;
+        }
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
     }
 }
 

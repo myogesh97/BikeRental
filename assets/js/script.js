@@ -313,6 +313,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const category = document.getElementById("filterCategory");
   const brand = document.getElementById("filterBrand");
 
+  if (!form || !availability || !category || !brand) return;
+
   const bikeCards = document.querySelectorAll(".motorcycle-card");
 
   const filterBikes = () => {
@@ -339,7 +341,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   form.addEventListener("reset", () => {
-    // wait for reset to apply
     setTimeout(() => {
       bikeCards.forEach((card) => {
         card.parentElement.style.display = "";
@@ -348,76 +349,50 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-function updateListingToolbar(currentPage = 1, perPage = 8) {
-  const bikes = document.querySelectorAll(".motorcycle-card");
-  const totalResults = bikes.length;
-  const start = (currentPage - 1) * perPage + 1;
-  let end = currentPage * perPage;
-  if (end > totalResults) end = totalResults;
+function updateListingToolbar() {
+  const resultsCount = document.getElementById("resultsCount");
+  const viewPage = document.getElementById("viewPage");
 
-  // Update text
-  const resultsText = `Displaying ${start} - ${end} of ${totalResults}`;
-  const pageText = `Page ${currentPage}`;
+  // ✅ Safeguard: Only run if both elements exist
+  if (!resultsCount || !viewPage) return;
 
-  document.getElementById("resultsCount").textContent = resultsText;
-  document.getElementById("viewPage").textContent = pageText;
+  const allCards = document.querySelectorAll(".motorcycle-card");
+  const visibleCards = Array.from(allCards).filter(
+    (card) => card.parentElement.style.display !== "none"
+  );
 
-  // Optionally: hide/show cards
-  bikes.forEach((bike, index) => {
-    if (index >= start - 1 && index < end) {
-      bike.closest(".col-lg-3").style.display = "block";
-    } else {
-      bike.closest(".col-lg-3").style.display = "none";
-    }
-  });
+  resultsCount.textContent = `Displaying ${visibleCards.length} of ${allCards.length}`;
+  viewPage.textContent = `Page 1`;
 }
+
+// ✅ Call only if .motorcycle-card and #resultsCount exist
+document.addEventListener("DOMContentLoaded", () => {
+  const hasCards = document.querySelector(".motorcycle-card");
+  const hasResults = document.getElementById("resultsCount");
+
+  if (hasCards && hasResults) {
+    updateListingToolbar();
+  }
+});
 
 // Run on load
 updateListingToolbar();
 
-// Pagination JS
-function renderPagination(totalItems, perPage = 8, currentPage = 1) {
-  const paginationContainer = document.getElementById("paginationContainer");
-  if (!paginationContainer) return;
+// Swiper Fix
 
-  const totalPages = Math.ceil(totalItems / perPage);
-  let html = "";
+const mainSlider = document.querySelector(".main-slider");
+const thumbSlider = document.querySelector(".thumb-slider");
 
-  if (currentPage > 1) {
-    html += `<li><a href="#" class="prev page-numbers" data-page="${
-      currentPage - 1
-    }">&lt; Prev</a></li>`;
-  }
-
-  for (let i = 1; i <= totalPages; i++) {
-    if (i === currentPage) {
-      html += `<li><span class="page-numbers current">${i}</span></li>`;
-    } else {
-      html += `<li><a href="#" class="page-numbers" data-page="${i}">${i}</a></li>`;
-    }
-  }
-
-  // Next Button
-  if (currentPage < totalPages) {
-    html += `<li><a href="#" class="next page-numbers" data-page="${
-      currentPage + 1
-    }">Next &gt;</a></li>`;
-  }
-
-  paginationContainer.innerHTML = html;
-
-  paginationContainer.querySelectorAll(".page-numbers").forEach((el) => {
-    el.addEventListener("click", (e) => {
-      e.preventDefault();
-      const page = parseInt(el.getAttribute("data-page"));
-      updateListingToolbar(page, perPage);
-      renderPagination(totalItems, perPage, page);
-    });
+if (mainSlider && thumbSlider) {
+  new Swiper(mainSlider, {
+    spaceBetween: 10,
+    thumbs: {
+      swiper: new Swiper(thumbSlider, {
+        slidesPerView: 4,
+        spaceBetween: 10,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+      }),
+    },
   });
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const bikes = document.querySelectorAll(".motorcycle-card");
-  updateListingToolbar(1, 8);
-  renderPagination(bikes.length, 8, 1);
-});
