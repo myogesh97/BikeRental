@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bike Rental</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'>
+    <link rel='stylesheet'
+        href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.theme.default.min.css'>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@splidejs/splide@1.2.0/dist/css/splide.min.css'>
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="sub-header">
+            <div class="container p-0 sub-headerInner">
+                <ul class="content-left">
+                    <li>
+                        <p>Welcome to our club!</p>
+                    </li>
+                    <li>
+                        <a href="mailto:info@example.com">info@example.com</a>
+                    </li>
+                </ul>
+                <ul class="content-right">
+                    <li>
+                        <a href="#!"><i class="fa-brands fa-square-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#!"><i class="fa-brands fa-youtube"></i></a>
+                    </li>
+                    <li>
+                        <a href="#!"><i class="fa-brands fa-square-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#!"><i class="fa-solid fa-square-share-nodes"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container p-0">
+                <div class="nav-brand">
+                    <a href="index.html" class="logo">
+                        <img src="./assets/images/site-logo.svg" alt="site-logo">
+                    </a>
+                </div>
+
+                <div class="nav-toggle">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link active">Home</a>
+                        </li>
+                        <li class="nav-item has-dropdown">
+                            <a href="#" class="nav-link">
+                                Bikes
+                                <svg class="icon chevron-icon" viewBox="0 0 24 24" width="14" height="14">
+                                    <path d="M7 10l5 5 5-5z" fill="currentColor"></path>
+                                </svg>
+                            </a>
+                            <ul class="dropdown">
+                                <li><a href="bike-shop.html">New Arrivals</a></li>
+                                <li><a href="bike-shop.html">Featured</a></li>
+                                <li><a href="bike-shop.html">Categories</a></li>
+                                <li><a href="bike-shop.html">Seasonal</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-dropdown">
+                            <a href="#" class="nav-link">
+                                Services
+                                <svg class="icon chevron-icon" viewBox="0 0 24 24" width="14" height="14">
+                                    <path d="M7 10l5 5 5-5z" fill="currentColor"></path>
+                                </svg>
+                            </a>
+                            <ul class="dropdown">
+                                <li><a href="#">Repairs</a></li>
+                                <li><a href="#">Trips</a></li>
+                                <li><a href="#">Group Rides</a></li>
+                                <li><a href="#">Packages</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="bike-shop.html" class="nav-link">Bike Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="aboutus.html" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </li>
+                        <li class="nav-item nav-buttonLink">
+                            <a href="join-the-club.html" class="nav-link">JOIN THE CLUB</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main style="padding-top: 15rem;">
+        <section class="product-detail-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <!-- Primary Slider Start-->
+                        <div id="primary_slider">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <img src="assets/images/bikes/bike-1.jpeg" alt="bike-img-1">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="assets/images/bikes/bike-2.jpeg" alt="bike-img-2">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="assets/images/bikes/bike-3.jpeg" alt="bike-img-3">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="assets/images/bikes/bike-4.jpeg" alt="bike-img-4">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="assets/images/bikes/bike-5.jpeg" alt="bike-img-5">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="assets/images/bikes/bike-6.jpeg" alt="bike-img-6">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="assets/images/bikes/bike-7.jpeg" alt="bike-img-7">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Primary Slider End-->
+                        <!-- Thumbnal Slider Start-->
+                        <div id="thumbnail_slider">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <img src="assets/images/bikes/bike-1.jpeg" alt="bike-img-1">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="assets/images/bikes/bike-2.jpeg" alt="bike-img-2">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="assets/images/bikes/bike-3.jpeg" alt="bike-img-3">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="assets/images/bikes/bike-4.jpeg" alt="bike-img-4">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="assets/images/bikes/bike-5.jpeg" alt="bike-img-5">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="assets/images/bikes/bike-6.jpeg" alt="bike-img-6">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="assets/images/bikes/bike-7.jpeg" alt="bike-img-7">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Thumbnal Slider End-->
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="product-info">
+                            <h1>Interceptor (2025)</h1>
+                            <div class="info-item">
+                                <span class="info-label">Status:</span>
+                                <span class="info-value">available</span>
+                            </div>
+                            <div class="price">
+                                &#8377;1200
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Stock:</span>
+                                <span class="info-value">2</span>
+                            </div>
+                            <div class="bike-specs">
+                                <h3>Bike Specifications</h3>
+                                <div class="spec-grid">
+                                    <div class="spec-item">
+                                        <h4>Fuel</h4>
+                                        <p>Petrol</p>
+                                    </div>
+                                    <div class="spec-item">
+                                        <h4>Gears</h4>
+                                        <p>6-Speed Manual</p>
+                                    </div>
+                                    <div class="spec-item">
+                                        <h4>Engine</h4>
+                                        <p>600cc Liquid-Cooled</p>
+                                    </div>
+                                    <div class="spec-item">
+                                        <h4>Mileage</h4>
+                                        <p>25 km/l</p>
+                                    </div>
+                                    <div class="spec-item">
+                                        <h4>Deposit</h4>
+                                        <p>₹3000 (Refundable)</p>
+                                    </div>
+                                    <div class="spec-item">
+                                        <h4>Rental Basis</h4>
+                                        <p>Per Day</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-purchase-actions">
+                                <!-- <button class="btn btn-wishlist"><i class="far fa-heart"></i> Add to Wishlist</button> -->
+                                <button class="btn btn-primary"><ion-icon name="logo-whatsapp"></ion-icon> Contact
+                                    us</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="related-products">
+            <div class="container">
+                <div class="section-primary_title">
+                    <span><ion-icon name="filter-outline"></ion-icon> Check our <ion-icon
+                            name="filter-outline"></ion-icon></span>
+                    <h2>other motorcycles</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="product-card">
+                            <a href="bike.html">
+                                <img src="https://images.pexels.com/photos/2626668/pexels-photo-2626668.jpeg"
+                                    alt="Yamaha R6">
+                                <div class="card-content">
+                                    <h3>Duek 250 (2024)</h3>
+                                    <p class="price">$13,749</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="product-card">
+                            <a href="bike.html">
+                                <img src="https://images.pexels.com/photos/2377893/pexels-photo-2377893.jpeg"
+                                    alt="Duke 390">
+                                <div class="card-content">
+                                    <h3>Duke 390 (2025)</h3>
+                                    <p class="price">$16,499</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="product-card">
+                            <a href="bike.html">
+                                <img src="https://images.pexels.com/photos/750817/pexels-photo-750817.jpeg"
+                                    alt="himalayan">
+                                <div class="card-content">
+                                    <h3>himalayan (2022)</h3>
+                                    <p class="price">$24,499</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Image Slider Section -->
+    <section class="image-slider-only">
+        <div id="carousel2" class="owl-carousel">
+            <div class="item">
+                <img src="https://demo2.wpopal.com/lexrider/wp-content/uploads/2021/03/gallery-8.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="https://demo2.wpopal.com/lexrider/wp-content/uploads/2021/03/gallery-7.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="https://demo2.wpopal.com/lexrider/wp-content/uploads/2021/03/gallery-6.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="https://demo2.wpopal.com/lexrider/wp-content/uploads/2021/03/gallery-8.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="https://demo2.wpopal.com/lexrider/wp-content/uploads/2021/03/gallery-7.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="https://demo2.wpopal.com/lexrider/wp-content/uploads/2021/03/gallery-6.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="https://demo2.wpopal.com/lexrider/wp-content/uploads/2021/03/gallery-8.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="https://demo2.wpopal.com/lexrider/wp-content/uploads/2021/03/gallery-7.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="https://demo2.wpopal.com/lexrider/wp-content/uploads/2021/03/gallery-6.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid row">
+                    <div class="footer-widget col-lg-7">
+                        <h2 class="widget-title">
+                            DO YOU HAVE QUESTIONS? <br>
+                            DO NOT WAIT, <span class="highlight-text">LET'S TALK</span>
+                        </h2>
+                        <div class="contact-info">
+                            <p>
+                                <ion-icon name="call-outline"></ion-icon>
+                                <a href="tel:+911234567890">+(84) 22 4130 0555</a>
+                            </p>
+                            <p>
+                                <ion-icon name="mail-open-outline"></ion-icon>
+
+                                <a href="tel:PHONE_NUMBER">contact@example.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="row">
+                            <div class="footer-widget col-lg-6 col-md-6 col-sm-6">
+                                <h3 class="widget-title-sm">HEAD OFFICE</h3>
+                                <address>
+                                    Box 565,<br>
+                                    Charlestown, Nevis,<br>
+                                    West Indies,<br>
+                                    Caribbean
+                                </address>
+                                <a href="#" class="map-link">VIEW MAP</a>
+                            </div>
+
+                            <div class="footer-widget col-lg-6 col-md-6 col-sm-6">
+                                <h3 class="widget-title-sm">QUICK LINKS</h3>
+                                <ul class="quick-links">
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Our Mission</a></li>
+                                    <li><a href="#">Videos</a></li>
+                                    <li><a href="#">Albums</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content row">
+
+                    <div class="copyright-text col-lg-4 col-md-6">
+                        <p>Copyright © 2025. All Rights Reserved.</p>
+                    </div>
+
+                    <div class="footer-logo col-lg-4">
+                        <a href="index.html">
+                            <img src="assets/images/site-logo.svg" alt="Lex Rider Motorcycle Club Logo"></a>
+                    </div>
+
+                    <div class="social-media col-lg-4 col-md-6">
+                        <span>SOCIAL MEDIA</span>
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-square-twitter"></i></a>
+                        <a href="#" aria-label="share-site"><i class="fa-solid fa-square-share-nodes"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#top" class="scroll-to-top-button">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+    </footer>
+
+    <!-- Bootstrap Bundle JS (with Popper) -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- <script src="assets/js/jquery.min.js"></script> -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@1.2.0/dist/js/splide.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/7c61365257.js" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script>
+
+        var primarySlider = new Splide('#primary_slider', {
+            type: 'fade',
+            heightRatio: 0.5,
+            pagination: false,
+            fixedHeight: 450,
+            arrows: false,
+            cover: true,
+        });
+
+        var thumbnailSlider = new Splide('#thumbnail_slider', {
+            rewind: true,
+            fixedWidth: 100,
+            fixedHeight: 64,
+            isNavigation: true,
+            gap: 10,
+            focus: 'center',
+            pagination: false,
+            cover: true,
+            breakpoints: {
+                '600': {
+                    fixedWidth: 66,
+                    fixedHeight: 40,
+                }
+            }
+        }).mount();
+
+        primarySlider.sync(thumbnailSlider).mount();
+    </script>
+</body>
+
+</html>

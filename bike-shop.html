@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bike Rental</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'>
+    <link rel='stylesheet'
+        href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.theme.default.min.css'>
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="sub-header">
+            <div class="container p-0 sub-headerInner">
+                <ul class="content-left">
+                    <li>
+                        <p>Welcome to our club!</p>
+                    </li>
+                    <li>
+                        <a href="mailto:info@example.com">info@example.com</a>
+                    </li>
+                </ul>
+                <ul class="content-right">
+                    <li>
+                        <a href="#!"><i class="fa-brands fa-square-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#!"><i class="fa-brands fa-youtube"></i></a>
+                    </li>
+                    <li>
+                        <a href="#!"><i class="fa-brands fa-square-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#!"><i class="fa-solid fa-square-share-nodes"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container p-0">
+                <div class="nav-brand">
+                    <a href="index.html" class="logo">
+                        <img src="./assets/images/site-logo.svg" alt="site-logo">
+                    </a>
+                </div>
+
+                <div class="nav-toggle">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link active">Home</a>
+                        </li>
+                        <li class="nav-item has-dropdown">
+                            <a href="#" class="nav-link">
+                                Bikes
+                                <svg class="icon chevron-icon" viewBox="0 0 24 24" width="14" height="14">
+                                    <path d="M7 10l5 5 5-5z" fill="currentColor"></path>
+                                </svg>
+                            </a>
+                            <ul class="dropdown">
+                                <li><a href="bike-shop.html">New Arrivals</a></li>
+                                <li><a href="bike-shop.html">Featured</a></li>
+                                <li><a href="bike-shop.html">Categories</a></li>
+                                <li><a href="bike-shop.html">Seasonal</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-dropdown">
+                            <a href="#" class="nav-link">
+                                Services
+                                <svg class="icon chevron-icon" viewBox="0 0 24 24" width="14" height="14">
+                                    <path d="M7 10l5 5 5-5z" fill="currentColor"></path>
+                                </svg>
+                            </a>
+                            <ul class="dropdown">
+                                <li><a href="#">Repairs</a></li>
+                                <li><a href="#">Trips</a></li>
+                                <li><a href="#">Group Rides</a></li>
+                                <li><a href="#">Packages</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="bike-shop.html" class="nav-link">Bike Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="aboutus.html" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </li>
+                        <li class="nav-item nav-buttonLink">
+                            <a href="join-the-club.html" class="nav-link">JOIN THE CLUB</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main style="padding-top: 15rem;">
+        <section class="inventory-page">
+            <div class="container">
+
+                <div class="inventory-search-box">
+                    <h2>SEARCH INVENTORY</h2>
+                    <form class="search-form">
+                        <select name="condition">
+                            <option value="all">All Conditions</option>
+                        </select>
+                        <select name="category">
+                            <option value="all">All Categories</option>
+                        </select>
+                        <select name="brand">
+                            <option value="all">All Brands</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary">Search</button>
+                        <button type="reset" class="btn clear-filter">Clear Filter</button>
+                    </form>
+                </div>
+
+                <div class="listing-toolbar">
+                    <div class="results-count">Displaying 6 - 12 of 18</div>
+                    <div class="view-options">Page 1</div>
+                </div>
+
+                <div class="inventory-grid">
+
+                    <div class="motorcycle-card">
+                        <div class="card-image">
+                            <span class="status-tag available">available</span>
+                            <a href="bike.html">
+                                <img src="assets/images/bikes/bike-9.jpg" alt="Interceptor (2025)">
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <h3><a href="bike.html">Interceptor (2025)</a></h3>
+                            <div class="price">&#8377;1200</div>
+                            <div class="card-actions">
+                                <a href="bike.html" class="btn btn-primary">Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <nav class="pagination">
+                    <ul>
+                        <li><span class="page-numbers current">1</span></li>
+                        <li><a href="#" class="page-numbers">2</a></li>
+                        <li><a href="#" class="page-numbers">3</a></li>
+                        <li><a href="#" class="next page-numbers">Next &gt;</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid row">
+                    <div class="footer-widget col-lg-7">
+                        <h2 class="widget-title">
+                            DO YOU HAVE QUESTIONS? <br>
+                            DO NOT WAIT, <span class="highlight-text">LET'S TALK</span>
+                        </h2>
+                        <div class="contact-info">
+                            <p>
+                                <ion-icon name="call-outline"></ion-icon>
+                                <a href="tel:+911234567890">+(84) 22 4130 0555</a>
+                            </p>
+                            <p>
+                                <ion-icon name="mail-open-outline"></ion-icon>
+
+                                <a href="tel:PHONE_NUMBER">contact@example.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="row">
+                            <div class="footer-widget col-lg-6 col-md-6 col-sm-6">
+                                <h3 class="widget-title-sm">HEAD OFFICE</h3>
+                                <address>
+                                    Box 565,<br>
+                                    Charlestown, Nevis,<br>
+                                    West Indies,<br>
+                                    Caribbean
+                                </address>
+                                <a href="#" class="map-link">VIEW MAP</a>
+                            </div>
+
+                            <div class="footer-widget col-lg-6 col-md-6 col-sm-6">
+                                <h3 class="widget-title-sm">QUICK LINKS</h3>
+                                <ul class="quick-links">
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Our Mission</a></li>
+                                    <li><a href="#">Videos</a></li>
+                                    <li><a href="#">Albums</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content row">
+
+                    <div class="copyright-text col-lg-4 col-md-6">
+                        <p>Copyright © 2025. All Rights Reserved.</p>
+                    </div>
+
+                    <div class="footer-logo col-lg-4">
+                        <a href="index.html">
+                            <img src="assets/images/site-logo.svg" alt="Lex Rider Motorcycle Club Logo"></a>
+                    </div>
+
+                    <div class="social-media col-lg-4 col-md-6">
+                        <span>SOCIAL MEDIA</span>
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-square-twitter"></i></a>
+                        <a href="#" aria-label="share-site"><i class="fa-solid fa-square-share-nodes"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#top" class="scroll-to-top-button">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+    </footer>
+
+    <!-- Bootstrap Bundle JS (with Popper) -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- <script src="assets/js/jquery.min.js"></script> -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/7c61365257.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

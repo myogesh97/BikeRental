@@ -717,6 +717,12 @@
   max-width: 1650px;
 }
 
+.scrolled {
+  padding: 0.7rem 2rem;
+  background-color: rgba(31, 31, 31, 0.5098039216);
+  backdrop-filter: blur(5px);
+}
+
 .sub-header {
   background-color: #1d1d1d;
   color: #8e8e8e;
@@ -997,6 +1003,350 @@
 .nav-active .hamburger span:last-child {
   transform: rotate(-45deg);
   top: 9px;
+}
+
+.product-detail-section {
+  padding: 6rem 0;
+  background-color: #1a1a1a;
+}
+.product-detail-section .splide__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 580px;
+  overflow: hidden;
+  transition: 0.2s;
+  border-width: 2px !important;
+  margin: 1.5rem 0;
+}
+.product-detail-section .splide__slide img {
+  width: auto;
+  height: auto;
+  margin: auto;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+.product-detail-section .splide--nav .splide__track .splide__list .is-active {
+  border-color: #e50000;
+  border-width: 2px !important;
+}
+.product-detail-section .splide--nav .splide__track .splide__list .splide__slide.is-active {
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.3803921569);
+}
+.product-detail-section .splide--nav .splide__arrows .splide__arrow {
+  top: 50%;
+  transform: translate(0, -50%);
+  border-radius: 0.2rem;
+  width: 1.8em;
+  height: 1.8em;
+}
+.product-detail-section .splide--nav .splide__arrows .splide__arrow svg {
+  transition: 0.3s all;
+}
+.product-detail-section .splide--nav .splide__arrows .splide__arrow:hover svg {
+  fill: #e50000;
+}
+.product-detail-section .splide--nav .splide__arrows .splide__arrow.splide__arrow--prev {
+  left: 0.6rem;
+}
+.product-detail-section .splide--nav .splide__arrows .splide__arrow.splide__arrow--next {
+  right: 0.6rem;
+}
+.product-detail-section .product-info {
+  position: relative;
+  padding-left: 5rem;
+  padding-top: 1rem;
+  font-family: "Noto Sans", sans-serif;
+}
+.product-detail-section .product-info h1 {
+  font-size: 4rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  position: relative;
+  color: #fff;
+}
+.product-detail-section .product-info .info-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  text-transform: capitalize;
+}
+.product-detail-section .product-info .info-item .info-label {
+  font-weight: 700;
+  font-size: 2rem;
+}
+.product-detail-section .product-info .info-item .info-value {
+  font-size: 2rem;
+}
+.product-detail-section .product-info .price {
+  font-size: 2.5rem;
+  color: #e50000;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.product-detail-section .product-info .bike-specs {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #111;
+  border-radius: 6px;
+  color: #fff;
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.3098039216);
+}
+.product-detail-section .product-info .bike-specs h3 {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: #e50000;
+}
+.product-detail-section .product-info .bike-specs .spec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+}
+.product-detail-section .product-info .bike-specs .spec-grid .spec-item {
+  background: #1c1c1c;
+  padding: 1rem;
+  border-radius: 2px;
+  text-align: center;
+  border: 1px solid #333;
+}
+.product-detail-section .product-info .bike-specs .spec-grid .spec-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.product-detail-section .product-info .bike-specs .spec-grid .spec-item p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+}
+.product-detail-section .product-purchase-actions {
+  margin-top: 3rem;
+  display: flex;
+  gap: 1.5rem;
+}
+.product-detail-section .product-purchase-actions .btn {
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.product-detail-section .product-purchase-actions .btn-wishlist {
+  background: #333;
+  color: #fff;
+  border-color: #333;
+}
+.product-detail-section .product-purchase-actions .btn-wishlist i {
+  margin-right: 0.8rem;
+}
+.product-detail-section .product-purchase-actions .btn-wishlist:hover {
+  background-color: #444;
+  border-color: #444;
+}
+
+/* --- RELATED PRODUCTS --- */
+.related-products {
+  padding: 60px 0;
+}
+.related-products .product-card {
+  background-color: #1a1a1a;
+  text-align: center;
+}
+.related-products .product-card:hover .card-content h3 {
+  color: #e50000;
+}
+.related-products .product-card a {
+  display: block;
+  text-decoration: none;
+}
+.related-products .product-card img {
+  width: 100%;
+  height: 28rem;
+  object-fit: cover;
+}
+.related-products .product-card .card-content {
+  padding: 2rem;
+}
+.related-products .product-card h3 {
+  font-size: 3rem;
+  margin: 0 0 1rem;
+  color: #fff;
+  transition: 0.4s all;
+  text-transform: capitalize;
+}
+.related-products .product-card .price {
+  font-family: "Oswald", sans-serif;
+  color: #e50000;
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.inventory-page {
+  padding: 6rem 0;
+  /* --- MOTORCYCLE CARD --- */
+  /* --- PAGINATION --- */
+}
+.inventory-page .inventory-search-box {
+  background-color: #1a1a1a;
+  padding: 3rem;
+  margin-bottom: 4rem;
+  border: 1px solid #333;
+}
+.inventory-page .inventory-search-box h2 {
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  font-size: 4rem;
+  border-bottom: 2px solid #e50000;
+  padding-bottom: 1rem;
+  display: inline-block;
+  color: #e50000;
+}
+.inventory-page .inventory-search-box .search-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+.inventory-page .inventory-search-box .search-form select {
+  padding: 12px;
+  background-color: #111;
+  color: #fff;
+  border: 1px solid #444;
+  font-size: 1.6rem;
+}
+.inventory-page .inventory-search-box .search-form button {
+  height: 45px;
+}
+.inventory-page .inventory-search-box .search-form .clear-filter {
+  background: #333;
+  color: #fff;
+  border-color: #333;
+}
+.inventory-page .inventory-search-box .search-form .clear-filter i {
+  margin-right: 0.8rem;
+}
+.inventory-page .inventory-search-box .search-form .clear-filter:hover {
+  background-color: #444;
+  border-color: #444;
+}
+.inventory-page .listing-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-bottom: 1px solid #333;
+  color: #fff;
+  font-size: 1.8rem;
+  letter-spacing: 0.8px;
+}
+.inventory-page .inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+}
+.inventory-page .motorcycle-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.inventory-page .motorcycle-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+}
+.inventory-page .motorcycle-card .card-image {
+  position: relative;
+  overflow: hidden;
+}
+.inventory-page .motorcycle-card .card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.inventory-page .motorcycle-card .card-image .status-tag {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 4px 0.8rem;
+  font-size: 1.2rem;
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  text-transform: capitalize;
+}
+.inventory-page .motorcycle-card .card-image .status-tag.available {
+  background-color: #e50000;
+}
+.inventory-page .motorcycle-card .card-image .status-tag.not-available {
+  background-color: #444;
+}
+.inventory-page .motorcycle-card .card-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.inventory-page .motorcycle-card .card-content h3 {
+  font-size: 1.8rem;
+  margin: 0 0 1rem;
+  line-height: 1.3;
+  font-family: "Noto Sans", sans-serif;
+}
+.inventory-page .motorcycle-card .card-content h3 a {
+  text-decoration: none;
+  color: #fff;
+}
+.inventory-page .motorcycle-card .card-content h3 a:hover {
+  color: #e50000;
+}
+.inventory-page .motorcycle-card .card-content .price {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  color: #e50000;
+  margin-bottom: 1.5rem;
+}
+.inventory-page .motorcycle-card .card-content .card-actions {
+  margin-top: auto;
+  padding-top: 2rem;
+  text-align: center;
+  border-top: 1px solid #333;
+}
+.inventory-page .motorcycle-card .card-content .card-actions .btn {
+  width: 100%;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+.inventory-page .pagination {
+  justify-content: flex-end;
+  margin-top: 4rem;
+}
+.inventory-page .pagination a {
+  text-decoration: none;
+}
+.inventory-page .pagination ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  gap: 0.8rem;
+}
+.inventory-page .pagination .page-numbers {
+  display: block;
+  padding: 0.8rem 1.5rem;
+  border: 1px solid #444;
+  color: #fff;
+}
+.inventory-page .pagination .page-numbers.current, .inventory-page .pagination .page-numbers:hover {
+  background-color: #e50000;
+  border-color: #e50000;
+  color: #fff;
 }
 
 /*------------------------------------------
@@ -1357,6 +1707,16 @@ ul {
   color: #fff;
 }
 .btn:hover {
+  border-color: #e81938;
+  background-color: #fff;
+  color: #e81938;
+}
+
+.btn-check:checked + .btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check) + .btn:active {
   border-color: #e81938;
   background-color: #fff;
   color: #e81938;

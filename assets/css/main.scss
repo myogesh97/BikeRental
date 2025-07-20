@@ -1,5 +1,6 @@
 @use "./style";
 @use "./navbar";
+@use "./bike";
 @use "./responsive";
 
 * {
@@ -94,6 +95,16 @@ ul {
         background-color: #fff;
         color: #e81938;
     }
+}
+
+.btn-check:checked+.btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check)+.btn:active {
+    border-color: #e81938;
+    background-color: #fff;
+    color: #e81938;
 }
 
 .form-group {
