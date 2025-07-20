@@ -24,6 +24,7 @@ body {
     font-size: initial;
     font-family: "Teko", sans-serif;
     font-optical-sizing: auto;
+    padding-top: 15rem;
 }
 
 img {
@@ -59,6 +60,10 @@ textarea:hover,
 textarea:focus {
     outline: 0 !important;
     box-shadow: none !important;
+}
+
+textarea.form-control {
+  min-height: 110px;
 }
 
 h1,

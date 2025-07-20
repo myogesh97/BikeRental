@@ -54,8 +54,20 @@
         }
     }
 
-    .nav-active .nav-menu {
-        width: 100%;
+    // .nav-active .nav-menu {
+    //     width: 100%;
+    // }
+
+    .inventory-page .motorcycle-card .card-image img {
+        height: 20rem;
+    }
+
+    .product-detail-section {
+        padding-top: 2rem;
+
+        .product-info {
+            padding: 1rem 2rem;
+        }
     }
 }
 
@@ -66,14 +78,14 @@
 
     .nav-menu {
         position: fixed;
-        top: 14rem;
+        top: 14.7rem;
         right: -140%;
         flex-direction: column;
         align-items: flex-start;
         background: rgba(16, 16, 26, 0.7);
         backdrop-filter: saturate(180%) blur(10px);
         -webkit-backdrop-filter: saturate(180%) blur(10px);
-        width: 80%;
+        width: 60%;
         height: calc(100vh - 10rem);
         padding: 2rem;
         transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -81,8 +93,10 @@
         border-left: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .nav-active .nav-menu {
-        right: 0;
+    .nav-active {
+        .nav-menu {
+            right: 0;
+        }
     }
 
     .nav-list {
@@ -158,6 +172,15 @@
 }
 
 @media all and (max-width: 768px) {
+    .inventory-page {
+        .listing-toolbar {
+            padding: 0 4rem;
+        }
+
+        .pagination {
+            margin: 4rem 4rem 0;
+        }
+    }
 }
 
 @media all and (max-width: 576px) {
@@ -338,6 +361,35 @@
     .footer-bottom .footer-bottom-content {
         flex-direction: column;
         gap: 20px;
+    }
+
+    .inventory-page {
+        padding-top: 2rem;
+        padding-bottom: 0;
+
+        .inventory-search-box {
+            text-align: center;
+        }
+
+        .motorcycle-card {
+            margin: 1.6rem 4rem;
+        }
+    }
+
+    .product-detail-section {
+        padding-top: 2rem;
+
+        .product-info {
+            padding: 1rem 2rem;
+        }
+    }
+
+    .related-products {
+        padding-top: 2rem;
+
+        .product-card {
+            padding: 0rem 2rem;
+        }
     }
 
 }

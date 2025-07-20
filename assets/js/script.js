@@ -5,16 +5,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   navToggle.addEventListener("click", () => {
     navbar.classList.toggle("nav-active");
-    // Prevent scrolling when mobile nav is open
-    document.body.style.overflow = navbar.classList.contains("nav-active")
-      ? "hidden"
-      : "";
+    const isNavActive = navbar.classList.contains("nav-active");
+    document.body.style.overflow = isNavActive ? "hidden" : "";
+    document.body.classList.toggle("nav-open", isNavActive);
   });
 
   document.addEventListener("click", (e) => {
-    if (!navbar.contains(e.target) && navbar.classList.contains("nav-active")) {
+    const isClickOutside =
+      !navbar.contains(e.target) && !navToggle.contains(e.target);
+    if (isClickOutside && navbar.classList.contains("nav-active")) {
       navbar.classList.remove("nav-active");
       document.body.style.overflow = "";
+      document.body.classList.remove("nav-open");
     }
   });
 
