@@ -1787,6 +1787,13 @@ body.nav-open::before {
   .product-detail-section .product-info {
     padding: 1rem 2rem;
   }
+  .product-detail-section .product-purchase-actions {
+    justify-content: center;
+  }
+  .product-detail-section .product-purchase-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
   .related-products {
     padding-top: 2rem;
   }

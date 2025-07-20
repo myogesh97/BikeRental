@@ -184,9 +184,10 @@
 
 @media all and (max-width: 576px) {
 
-    main{
+    main {
         padding-top: 13.83rem !important;
     }
+
     .nav-menu {
         top: 13.83rem;
     }
@@ -387,6 +388,15 @@
 
         .product-info {
             padding: 1rem 2rem;
+        }
+
+        .product-purchase-actions {
+            justify-content: center;
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
         }
     }
 
