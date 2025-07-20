@@ -351,6 +351,11 @@
   transform: initial;
   top: initial;
   bottom: 6.5rem;
+  background-color: #fff;
+}
+.testimonial-section .owl-carousel .owl-nav button:hover {
+  color: #c40000;
+  border-color: #c40000;
 }
 .testimonial-section .owl-carousel .owl-nav .owl-prev {
   left: initial;

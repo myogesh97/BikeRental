@@ -437,6 +437,11 @@
                 transform: initial;
                 top: initial;
                 bottom: 6.5rem;
+                background-color: #fff;
+                &:hover {
+                    color: #c40000;
+                    border-color: #c40000;
+                }
             }
 
             .owl-prev {
