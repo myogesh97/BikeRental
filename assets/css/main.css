@@ -868,12 +868,6 @@ body.nav-open::before {
   max-width: 1650px;
 }
 
-.scrolled {
-  padding: 0.7rem 2rem;
-  background-color: rgba(31, 31, 31, 0.5098039216);
-  backdrop-filter: blur(5px);
-}
-
 .sub-header {
   background-color: #1d1d1d;
   color: #8e8e8e;
@@ -928,6 +922,11 @@ body.nav-open::before {
 }
 .sub-header .sub-headerInner .content-right li::after {
   content: none;
+}
+
+.nav-menu-wrapper {
+  position: relative;
+  z-index: 99;
 }
 
 .navbar {
@@ -1638,6 +1637,9 @@ body.nav-open::before {
   }
 }
 @media all and (max-width: 576px) {
+  .nav-menu {
+    top: 13.83rem;
+  }
   .section-padding {
     padding: 6rem 0;
   }
@@ -1834,7 +1836,10 @@ body {
   font-size: initial;
   font-family: "Teko", sans-serif;
   font-optical-sizing: auto;
-  padding-top: 15rem;
+}
+
+main {
+  padding-top: 14.6rem;
 }
 
 img {

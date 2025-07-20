@@ -10,7 +10,6 @@
 
 @media all and (max-width: 1024px) {
     .owl-carousel.hero-bannerSection {
-
         .item .text-content-shell .text-content {
             padding: 4rem 10rem;
         }
@@ -184,6 +183,10 @@
 }
 
 @media all and (max-width: 576px) {
+
+    .nav-menu {
+        top: 13.83rem;
+    }
 
     .section-padding {
         padding: 6rem 0;

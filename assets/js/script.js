@@ -71,8 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
   style.textContent = `
     .scrolled {
         padding: 0.7rem 2rem;
-        background-color: #1f1f1f82;
-        backdrop-filter: blur(5px);
+        background-color: rgba(16, 16, 26, 0.7);
     }
 
     @media (max-width: 576px) {

@@ -22,12 +22,6 @@ body.nav-open {
 
 }
 
-.scrolled {
-    padding: 0.7rem 2rem;
-    background-color: #1f1f1f82;
-    backdrop-filter: blur(5px);
-}
-
 .sub-header {
     background-color: #1d1d1d;
     color: #8e8e8e;
@@ -96,7 +90,10 @@ body.nav-open {
         }
     }
 }
-
+.nav-menu-wrapper {
+  position: relative;
+  z-index: 99;
+}
 .navbar {
     position: relative;
     min-height: 10rem;
