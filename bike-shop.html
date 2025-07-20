@@ -67,7 +67,7 @@
                     </div>
                 </div>
 
-                
+
                 <div class="nav-menu">
                     <ul class="nav-list">
                         <li class="nav-item">
@@ -127,16 +127,28 @@
                     <div class="col-lg-12">
                         <div class="inventory-search-box">
                             <h2>SEARCH INVENTORY</h2>
-                            <form class="search-form">
-                                <select name="condition">
-                                    <option value="all">All Conditions</option>
+                            <form id="bikeFilterForm" class="search-form">
+                                <select id="filterAvailability" name="availability">
+                                    <option value="all">All</option>
+                                    <option value="available">available</option>
+                                    <option value="not-available">not available</option>
                                 </select>
-                                <select name="category">
+
+                                <select id="filterCategory" name="category">
                                     <option value="all">All Categories</option>
+                                    <option value="sport">Sport</option>
+                                    <option value="cruiser">Cruiser</option>
+                                    <option value="racer">Racer</option>
+                                    <option value="retro">Retro</option>
                                 </select>
-                                <select name="brand">
+
+                                <select id="filterBrand" name="brand">
                                     <option value="all">All Brands</option>
+                                    <option value="royal-enfield">Royal Enfield</option>
+                                    <option value="yamaha">Yamaha</option>
+                                    <option value="ktm">KTM</option>
                                 </select>
+
                                 <button type="submit" class="btn btn-primary">Search</button>
                                 <button type="reset" class="btn clear-filter">Clear Filter</button>
                             </form>
@@ -146,21 +158,94 @@
 
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="listing-toolbar">
-                            <div class="results-count">Displaying 1 - 8 of 18</div>
-                            <div class="view-options">Page 1</div>
+                        <div class="listing-toolbar d-flex justify-content-between align-items-center">
+                            <div id="resultsCount" class="results-count">Displaying 1 - 8 of 18</div>
+                            <div id="viewPage" class="view-options">Page 1</div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 col-md-4">
-                        <div class="motorcycle-card">
+                        <div class="motorcycle-card" data-availability="not-available" data-category="sport"
+                            data-brand="hero">
                             <div class="card-image">
-                                <span class="status-tag available">available</span>
+                                <span class="status-tag not-available">not-available</span>
                                 <a href="bike.html">
-                                    <img src="assets/images/bikes/bike-9.jpg" alt="Interceptor (2025)">
+                                    <img src="assets/images/bikes/bike-9.jpg" alt="Xpulse 200 (2024)">
                                 </a>
                             </div>
                             <div class="card-content">
-                                <h3><a href="bike.html">Interceptor (2025)</a></h3>
+                                <h3><a href="bike.html">Xpulse 200 (2024)</a></h3>
+                                <div class="price">&#8377;1100</div>
+                                <div class="card-actions">
+                                    <a href="bike.html" class="btn btn-primary">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-md-4">
+                        <div class="motorcycle-card" data-availability="available" data-category="sport"
+                            data-brand="jawa">
+                            <div class="card-image">
+                                <span class="status-tag available">available</span>
+                                <a href="bike.html">
+                                    <img src="assets/images/bikes/bike-10.jpg" alt="Perak (2024)">
+                                </a>
+                            </div>
+                            <div class="card-content">
+                                <h3><a href="bike.html">Perak (2024)</a></h3>
+                                <div class="price">&#8377;1300</div>
+                                <div class="card-actions">
+                                    <a href="bike.html" class="btn btn-primary">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-md-4">
+                        <div class="motorcycle-card" data-availability="available" data-category="cruiser"
+                            data-brand="yamaha">
+                            <div class="card-image">
+                                <span class="status-tag available">available</span>
+                                <a href="bike.html">
+                                    <img src="assets/images/bikes/bike-11.jpg" alt="R15 V4 (2022)">
+                                </a>
+                            </div>
+                            <div class="card-content">
+                                <h3><a href="bike.html">R15 V4 (2022)</a></h3>
+                                <div class="price">&#8377;1100</div>
+                                <div class="card-actions">
+                                    <a href="bike.html" class="btn btn-primary">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-md-4">
+                        <div class="motorcycle-card" data-availability="not-available" data-category="sport"
+                            data-brand="tvs">
+                            <div class="card-image">
+                                <span class="status-tag not-available">not-available</span>
+                                <a href="bike.html">
+                                    <img src="assets/images/bikes/bike-12.jpg" alt="Apache RR 310 (2025)">
+                                </a>
+                            </div>
+                            <div class="card-content">
+                                <h3><a href="bike.html">Apache RR 310 (2025)</a></h3>
+                                <div class="price">&#8377;1100</div>
+                                <div class="card-actions">
+                                    <a href="bike.html" class="btn btn-primary">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-md-4">
+                        <div class="motorcycle-card" data-availability="available" data-category="sport"
+                            data-brand="royal-enfield">
+                            <div class="card-image">
+                                <span class="status-tag available">available</span>
+                                <a href="bike.html">
+                                    <img src="assets/images/bikes/bike-13.jpg" alt="Classic 350 (2023)">
+                                </a>
+                            </div>
+                            <div class="card-content">
+                                <h3><a href="bike.html">Classic 350 (2023)</a></h3>
                                 <div class="price">&#8377;1200</div>
                                 <div class="card-actions">
                                     <a href="bike.html" class="btn btn-primary">Details</a>
@@ -169,152 +254,89 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 col-md-4">
-                        <div class="motorcycle-card">
+                        <div class="motorcycle-card" data-availability="available" data-category="sport"
+                            data-brand="ktm">
                             <div class="card-image">
-                                <span class="status-tag not-available">not available</span>
+                                <span class="status-tag available">available</span>
                                 <a href="bike.html">
-                                    <img src="assets/images/bikes/bike-18.jpg" alt="duke (2024)">
+                                    <img src="assets/images/bikes/bike-14.jpg" alt="Duke 390 (2024)">
                                 </a>
                             </div>
                             <div class="card-content">
-                                <h3><a href="bike.html">duke (2024)</a></h3>
+                                <h3><a href="bike.html">Duke 390 (2024)</a></h3>
+                                <div class="price">&#8377;1500</div>
+                                <div class="card-actions">
+                                    <a href="bike.html" class="btn btn-primary">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-md-4">
+                        <div class="motorcycle-card" data-availability="available" data-category="sport"
+                            data-brand="bajaj">
+                            <div class="card-image">
+                                <span class="status-tag available">available</span>
+                                <a href="bike.html">
+                                    <img src="assets/images/bikes/bike-15.jpg" alt="Dominar 400 (2023)">
+                                </a>
+                            </div>
+                            <div class="card-content">
+                                <h3><a href="bike.html">Dominar 400 (2023)</a></h3>
+                                <div class="price">&#8377;1250</div>
+                                <div class="card-actions">
+                                    <a href="bike.html" class="btn btn-primary">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-md-4">
+                        <div class="motorcycle-card" data-availability="not-available" data-category="sport"
+                            data-brand="royal-enfield">
+                            <div class="card-image">
+                                <span class="status-tag not-available">not-available</span>
+                                <a href="bike.html">
+                                    <img src="assets/images/bikes/bike-16.jpg" alt="Himalayan (2022)">
+                                </a>
+                            </div>
+                            <div class="card-content">
+                                <h3><a href="bike.html">Himalayan (2022)</a></h3>
+                                <div class="price">&#8377;1350</div>
+                                <div class="card-actions">
+                                    <a href="bike.html" class="btn btn-primary">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-md-4">
+                        <div class="motorcycle-card" data-availability="available" data-category="sport"
+                            data-brand="yamaha">
+                            <div class="card-image">
+                                <span class="status-tag available">available</span>
+                                <a href="bike.html">
+                                    <img src="assets/images/bikes/bike-17.jpg" alt="FZ-S FI (2023)">
+                                </a>
+                            </div>
+                            <div class="card-content">
+                                <h3><a href="bike.html">FZ-S FI (2023)</a></h3>
+                                <div class="price">&#8377;1000</div>
+                                <div class="card-actions">
+                                    <a href="bike.html" class="btn btn-primary">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-md-4">
+                        <div class="motorcycle-card" data-availability="available" data-category="sport"
+                            data-brand="royal-enfield">
+                            <div class="card-image">
+                                <span class="status-tag available">available</span>
+                                <a href="bike.html">
+                                    <img src="assets/images/bikes/bike-18.jpg" alt="Bullet 350 (2025)">
+                                </a>
+                            </div>
+                            <div class="card-content">
+                                <h3><a href="bike.html">Bullet 350 (2025)</a></h3>
                                 <div class="price">&#8377;1400</div>
-                                <div class="card-actions">
-                                    <a href="bike.html" class="btn btn-primary">Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 col-md-4">
-                        <div class="motorcycle-card">
-                            <div class="card-image">
-                                <span class="status-tag available">available</span>
-                                <a href="bike.html">
-                                    <img src="assets/images/bikes/bike-17.jpg" alt="Interceptor (2024)">
-                                </a>
-                            </div>
-                            <div class="card-content">
-                                <h3><a href="bike.html">duke 390 (2025)</a></h3>
-                                <div class="price">&#8377;1200</div>
-                                <div class="card-actions">
-                                    <a href="bike.html" class="btn btn-primary">Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 col-md-4">
-                        <div class="motorcycle-card">
-                            <div class="card-image">
-                                <span class="status-tag available">available</span>
-                                <a href="bike.html">
-                                    <img src="assets/images/bikes/bike-16.jpg" alt="Interceptor (2025)">
-                                </a>
-                            </div>
-                            <div class="card-content">
-                                <h3><a href="bike.html">Interceptor (2025)</a></h3>
-                                <div class="price">&#8377;1200</div>
-                                <div class="card-actions">
-                                    <a href="bike.html" class="btn btn-primary">Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 col-md-4">
-                        <div class="motorcycle-card">
-                            <div class="card-image">
-                                <span class="status-tag available">available</span>
-                                <a href="bike.html">
-                                    <img src="assets/images/bikes/bike-15.jpg" alt="Interceptor (2025)">
-                                </a>
-                            </div>
-                            <div class="card-content">
-                                <h3><a href="bike.html">Interceptor (2025)</a></h3>
-                                <div class="price">&#8377;1200</div>
-                                <div class="card-actions">
-                                    <a href="bike.html" class="btn btn-primary">Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 col-md-4">
-                        <div class="motorcycle-card">
-                            <div class="card-image">
-                                <span class="status-tag available">available</span>
-                                <a href="bike.html">
-                                    <img src="assets/images/bikes/bike-14.jpg" alt="Interceptor (2025)">
-                                </a>
-                            </div>
-                            <div class="card-content">
-                                <h3><a href="bike.html">Interceptor (2025)</a></h3>
-                                <div class="price">&#8377;1200</div>
-                                <div class="card-actions">
-                                    <a href="bike.html" class="btn btn-primary">Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 col-md-4">
-                        <div class="motorcycle-card">
-                            <div class="card-image">
-                                <span class="status-tag available">available</span>
-                                <a href="bike.html">
-                                    <img src="assets/images/bikes/bike-13.jpg" alt="Interceptor (2025)">
-                                </a>
-                            </div>
-                            <div class="card-content">
-                                <h3><a href="bike.html">Interceptor (2025)</a></h3>
-                                <div class="price">&#8377;1200</div>
-                                <div class="card-actions">
-                                    <a href="bike.html" class="btn btn-primary">Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 col-md-4">
-                        <div class="motorcycle-card">
-                            <div class="card-image">
-                                <span class="status-tag available">available</span>
-                                <a href="bike.html">
-                                    <img src="assets/images/bikes/bike-12.jpg" alt="Interceptor (2025)">
-                                </a>
-                            </div>
-                            <div class="card-content">
-                                <h3><a href="bike.html">Interceptor (2025)</a></h3>
-                                <div class="price">&#8377;1200</div>
-                                <div class="card-actions">
-                                    <a href="bike.html" class="btn btn-primary">Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 col-md-4">
-                        <div class="motorcycle-card">
-                            <div class="card-image">
-                                <span class="status-tag available">available</span>
-                                <a href="bike.html">
-                                    <img src="assets/images/bikes/bike-11.jpg" alt="Interceptor (2025)">
-                                </a>
-                            </div>
-                            <div class="card-content">
-                                <h3><a href="bike.html">Interceptor (2025)</a></h3>
-                                <div class="price">&#8377;1200</div>
-                                <div class="card-actions">
-                                    <a href="bike.html" class="btn btn-primary">Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 col-md-4">
-                        <div class="motorcycle-card">
-                            <div class="card-image">
-                                <span class="status-tag not-available">not available</span>
-                                <a href="bike.html">
-                                    <img src="assets/images/bikes/bike-10.jpg" alt="Interceptor (2025)">
-                                </a>
-                            </div>
-                            <div class="card-content">
-                                <h3><a href="bike.html">Interceptor (2025)</a></h3>
-                                <div class="price">&#8377;1200</div>
                                 <div class="card-actions">
                                     <a href="bike.html" class="btn btn-primary">Details</a>
                                 </div>
@@ -326,11 +348,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="pagination">
-                            <ul>
-                                <li><span class="page-numbers current">1</span></li>
-                                <li><a href="#" class="page-numbers">2</a></li>
-                                <li><a href="#" class="next page-numbers">Next &gt;</a></li>
-                            </ul>
+                            <ul id="paginationContainer"></ul>
                         </div>
                     </div>
                 </div>

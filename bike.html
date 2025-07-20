@@ -15,7 +15,7 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'>
     <link rel='stylesheet'
         href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.theme.default.min.css'>
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@splidejs/splide@1.2.0/dist/css/splide.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.css'>
     <!-- Bootstrap 5 CSS -->
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -68,7 +68,7 @@
                     </div>
                 </div>
 
-                
+
                 <div class="nav-menu">
                     <ul class="nav-list">
                         <li class="nav-item">
@@ -126,64 +126,56 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                        <!-- Primary Slider Start-->
-                        <div id="primary_slider">
-                            <div class="splide__track">
-                                <ul class="splide__list">
-                                    <li class="splide__slide">
+
+                        <div class="gallery">
+                            <div class="swiper-container gallery-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
                                         <img src="assets/images/bikes/bike-1.jpeg" alt="bike-img-1">
-                                    </li>
-                                    <li class="splide__slide">
+                                    </div>
+                                    <div class="swiper-slide">
                                         <img src="assets/images/bikes/bike-2.jpeg" alt="bike-img-2">
-                                    </li>
-                                    <li class="splide__slide">
+                                    </div>
+                                    <div class="swiper-slide">
                                         <img src="assets/images/bikes/bike-3.jpeg" alt="bike-img-3">
-                                    </li>
-                                    <li class="splide__slide">
+                                    </div>
+                                    <div class="swiper-slide">
                                         <img src="assets/images/bikes/bike-4.jpeg" alt="bike-img-4">
-                                    </li>
-                                    <li class="splide__slide">
+                                    </div>
+                                    <div class="swiper-slide">
                                         <img src="assets/images/bikes/bike-5.jpeg" alt="bike-img-5">
-                                    </li>
-                                    <li class="splide__slide">
+                                    </div>
+                                    <div class="swiper-slide">
                                         <img src="assets/images/bikes/bike-6.jpeg" alt="bike-img-6">
-                                    </li>
-                                    <li class="splide__slide">
-                                        <img src="assets/images/bikes/bike-7.jpeg" alt="bike-img-7">
-                                    </li>
-                                </ul>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-prev s-button_box"><i class="fa-solid fa-chevron-left"></i></div>
+                                <div class="swiper-button-next s-button_box"><i class="fa-solid fa-chevron-right"></i></div>
+                            </div>
+
+                            <div class="swiper-container gallery-thumbs">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="assets/images/bikes/bike-1.jpeg" alt="bike-img-1">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="assets/images/bikes/bike-2.jpeg" alt="bike-img-2">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="assets/images/bikes/bike-3.jpeg" alt="bike-img-3">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="assets/images/bikes/bike-4.jpeg" alt="bike-img-4">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="assets/images/bikes/bike-5.jpeg" alt="bike-img-5">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="assets/images/bikes/bike-6.jpeg" alt="bike-img-6">
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <!-- Primary Slider End-->
-                        <!-- Thumbnal Slider Start-->
-                        <div id="thumbnail_slider">
-                            <div class="splide__track">
-                                <ul class="splide__list">
-                                    <li class="splide__slide">
-                                        <img src="assets/images/bikes/bike-1.jpeg" alt="bike-img-1">
-                                    </li>
-                                    <li class="splide__slide">
-                                        <img src="assets/images/bikes/bike-2.jpeg" alt="bike-img-2">
-                                    </li>
-                                    <li class="splide__slide">
-                                        <img src="assets/images/bikes/bike-3.jpeg" alt="bike-img-3">
-                                    </li>
-                                    <li class="splide__slide">
-                                        <img src="assets/images/bikes/bike-4.jpeg" alt="bike-img-4">
-                                    </li>
-                                    <li class="splide__slide">
-                                        <img src="assets/images/bikes/bike-5.jpeg" alt="bike-img-5">
-                                    </li>
-                                    <li class="splide__slide">
-                                        <img src="assets/images/bikes/bike-6.jpeg" alt="bike-img-6">
-                                    </li>
-                                    <li class="splide__slide">
-                                        <img src="assets/images/bikes/bike-7.jpeg" alt="bike-img-7">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- Thumbnal Slider End-->
                     </div>
 
                     <div class="col-lg-6">
@@ -231,7 +223,8 @@
                             </div>
                             <div class="product-purchase-actions">
                                 <!-- <button class="btn btn-wishlist"><i class="far fa-heart"></i> Add to Wishlist</button> -->
-                                <button class="btn btn-primary"><ion-icon name="logo-whatsapp"></ion-icon> Contact
+                                <button id="whatsappButton" class="btn btn-primary"><ion-icon
+                                        name="logo-whatsapp"></ion-icon> Contact
                                     us</button>
                             </div>
                         </div>
@@ -255,7 +248,7 @@
                                     alt="Yamaha R6">
                                 <div class="card-content">
                                     <h3>Duek 250 (2024)</h3>
-                                    <p class="price">$13,749</p>
+                                    <p class="price">&#8377;1400</p>
                                 </div>
                             </a>
                         </div>
@@ -267,7 +260,7 @@
                                     alt="Duke 390">
                                 <div class="card-content">
                                     <h3>Duke 390 (2025)</h3>
-                                    <p class="price">$16,499</p>
+                                    <p class="price">&#8377;900</p>
                                 </div>
                             </a>
                         </div>
@@ -279,7 +272,7 @@
                                     alt="himalayan">
                                 <div class="card-content">
                                     <h3>himalayan (2022)</h3>
-                                    <p class="price">$24,499</p>
+                                    <p class="price">&#8377;1200</p>
                                 </div>
                             </a>
                         </div>
@@ -408,41 +401,54 @@
     <!-- <script src="assets/js/jquery.min.js"></script> -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@1.2.0/dist/js/splide.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://kit.fontawesome.com/7c61365257.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 
     <script>
-
-        var primarySlider = new Splide('#primary_slider', {
-            type: 'fade',
-            heightRatio: 0.5,
-            pagination: false,
-            fixedHeight: 450,
-            arrows: false,
-            cover: true,
+        var slider = new Swiper('.gallery-slider', {
+            slidesPerView: 1,
+            centeredSlides: true,
+            loop: true,
+            loopedSlides: 6, 
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
         });
 
-        var thumbnailSlider = new Splide('#thumbnail_slider', {
-            rewind: true,
-            fixedWidth: 100,
-            fixedHeight: 64,
-            isNavigation: true,
-            gap: 10,
-            focus: 'center',
-            pagination: false,
-            cover: true,
-            breakpoints: {
-                '600': {
-                    fixedWidth: 66,
-                    fixedHeight: 40,
-                }
-            }
-        }).mount();
+        var thumbs = new Swiper('.gallery-thumbs', {
+            slidesPerView: 'auto',
+            spaceBetween: 10,
+            centeredSlides: true,
+            loop: true,
+            slideToClickedSlide: true,
+        });
 
-        primarySlider.sync(thumbnailSlider).mount();
+        //slider.params.control = thumbs;
+        //thumbs.params.control = slider;
+
+        slider.controller.control = thumbs;
+        thumbs.controller.control = slider;
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const whatsappButton = document.getElementById("whatsappButton");
+            const bikeName = document.querySelector(".product-info h1")?.innerText || "Bike";
+            const price = document.querySelector(".product-info .price")?.innerText || "Price not available";
+
+            const message = `Hi, I'm interested in renting the bike: ${bikeName} priced at ${price}. Please provide more details.`;
+            const encodedMessage = encodeURIComponent(message);
+
+            const whatsappURL = `https://wa.me/919958050516?text=${encodedMessage}`;
+
+            whatsappButton.addEventListener("click", () => {
+                window.open(whatsappURL, "_blank");
+            });
+        });
     </script>
 </body>
 

@@ -305,3 +305,119 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleButtonVisibility();
   }
 });
+
+// Bike Sorting
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("bikeFilterForm");
+  const availability = document.getElementById("filterAvailability");
+  const category = document.getElementById("filterCategory");
+  const brand = document.getElementById("filterBrand");
+
+  const bikeCards = document.querySelectorAll(".motorcycle-card");
+
+  const filterBikes = () => {
+    const availValue = availability.value;
+    const categoryValue = category.value;
+    const brandValue = brand.value;
+
+    bikeCards.forEach((card) => {
+      const matchAvail =
+        availValue === "all" || card.dataset.availability === availValue;
+      const matchCat =
+        categoryValue === "all" || card.dataset.category === categoryValue;
+      const matchBrand =
+        brandValue === "all" || card.dataset.brand === brandValue;
+
+      const visible = matchAvail && matchCat && matchBrand;
+      card.parentElement.style.display = visible ? "" : "none";
+    });
+  };
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    filterBikes();
+  });
+
+  form.addEventListener("reset", () => {
+    // wait for reset to apply
+    setTimeout(() => {
+      bikeCards.forEach((card) => {
+        card.parentElement.style.display = "";
+      });
+    }, 0);
+  });
+});
+
+function updateListingToolbar(currentPage = 1, perPage = 8) {
+  const bikes = document.querySelectorAll(".motorcycle-card");
+  const totalResults = bikes.length;
+  const start = (currentPage - 1) * perPage + 1;
+  let end = currentPage * perPage;
+  if (end > totalResults) end = totalResults;
+
+  // Update text
+  const resultsText = `Displaying ${start} - ${end} of ${totalResults}`;
+  const pageText = `Page ${currentPage}`;
+
+  document.getElementById("resultsCount").textContent = resultsText;
+  document.getElementById("viewPage").textContent = pageText;
+
+  // Optionally: hide/show cards
+  bikes.forEach((bike, index) => {
+    if (index >= start - 1 && index < end) {
+      bike.closest(".col-lg-3").style.display = "block";
+    } else {
+      bike.closest(".col-lg-3").style.display = "none";
+    }
+  });
+}
+
+// Run on load
+updateListingToolbar();
+
+// Pagination JS
+function renderPagination(totalItems, perPage = 8, currentPage = 1) {
+  const paginationContainer = document.getElementById("paginationContainer");
+  if (!paginationContainer) return;
+
+  const totalPages = Math.ceil(totalItems / perPage);
+  let html = "";
+
+  if (currentPage > 1) {
+    html += `<li><a href="#" class="prev page-numbers" data-page="${
+      currentPage - 1
+    }">&lt; Prev</a></li>`;
+  }
+
+  for (let i = 1; i <= totalPages; i++) {
+    if (i === currentPage) {
+      html += `<li><span class="page-numbers current">${i}</span></li>`;
+    } else {
+      html += `<li><a href="#" class="page-numbers" data-page="${i}">${i}</a></li>`;
+    }
+  }
+
+  // Next Button
+  if (currentPage < totalPages) {
+    html += `<li><a href="#" class="next page-numbers" data-page="${
+      currentPage + 1
+    }">Next &gt;</a></li>`;
+  }
+
+  paginationContainer.innerHTML = html;
+
+  paginationContainer.querySelectorAll(".page-numbers").forEach((el) => {
+    el.addEventListener("click", (e) => {
+      e.preventDefault();
+      const page = parseInt(el.getAttribute("data-page"));
+      updateListingToolbar(page, perPage);
+      renderPagination(totalItems, perPage, page);
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const bikes = document.querySelectorAll(".motorcycle-card");
+  updateListingToolbar(1, 8);
+  renderPagination(bikes.length, 8, 1);
+});
