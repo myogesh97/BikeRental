@@ -1062,7 +1062,8 @@
     }
 }
 
-.terms-page {
+.terms-page,
+.privacy-page {
     font-family: "Noto Sans", sans-serif;
     color: #c6c6c6;
     font-size: 1.6rem;
@@ -1101,6 +1102,9 @@
         font-size: 0.9em;
         color: #6c757d;
         margin-bottom: 2rem;
+    }
+    a {
+        color: #e50000;
     }
 }
 

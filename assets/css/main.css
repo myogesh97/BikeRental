@@ -871,40 +871,52 @@
   box-shadow: 0 0 0 0.25rem rgba(229, 0, 0, 0.25);
 }
 
-.terms-page {
+.terms-page,
+.privacy-page {
   font-family: "Noto Sans", sans-serif;
   color: #c6c6c6;
   font-size: 1.6rem;
   margin-bottom: 1.2rem;
 }
 .terms-page p,
-.terms-page li {
+.terms-page li,
+.privacy-page p,
+.privacy-page li {
   color: #c6c6c6;
 }
-.terms-page ul {
+.terms-page ul,
+.privacy-page ul {
   padding-left: 20px;
 }
-.terms-page strong {
+.terms-page strong,
+.privacy-page strong {
   color: #fff;
 }
-.terms-page h1 {
+.terms-page h1,
+.privacy-page h1 {
   color: #fff;
   text-align: center;
   border-bottom: 2px solid #dee2e6;
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
 }
-.terms-page h2 {
+.terms-page h2,
+.privacy-page h2 {
   color: #fff;
   margin-top: 2rem;
   border-bottom: 1px solid #e9ecef;
   padding-bottom: 0.3rem;
 }
-.terms-page .last-updated {
+.terms-page .last-updated,
+.privacy-page .last-updated {
   text-align: center;
   font-size: 0.9em;
   color: #6c757d;
   margin-bottom: 2rem;
+}
+.terms-page a,
+.privacy-page a {
+  color: #e50000;
 }
 
 .aboutus-section .mission-grid {
