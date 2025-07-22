@@ -85,7 +85,8 @@
         backdrop-filter: saturate(180%) blur(10px);
         -webkit-backdrop-filter: saturate(180%) blur(10px);
         width: 60%;
-        height: calc(100vh - 10rem);
+        height: calc(100vh - 13.83rem);
+        overflow-y: auto;
         padding: 2rem;
         transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
