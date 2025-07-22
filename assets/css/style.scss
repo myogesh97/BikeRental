@@ -1,3 +1,7 @@
+section, footer {
+    overflow: hidden;
+}
+
 .section-padding {
     padding: 10rem 0;
 }
@@ -230,7 +234,6 @@
 }
 
 // Info Banner 
-
 .info-banner-section {
 
     .row {
@@ -1103,6 +1106,7 @@
         color: #6c757d;
         margin-bottom: 2rem;
     }
+
     a {
         color: #e50000;
     }

@@ -1,3 +1,7 @@
+section, footer {
+  overflow: hidden;
+}
+
 .section-padding {
   padding: 10rem 0;
 }
