@@ -388,7 +388,6 @@ function updateListingToolbar() {
   viewPage.textContent = `Page 1`;
 }
 
-// ✅ Call only if .motorcycle-card and #resultsCount exist
 document.addEventListener("DOMContentLoaded", () => {
   const hasCards = document.querySelector(".motorcycle-card");
   const hasResults = document.getElementById("resultsCount");
