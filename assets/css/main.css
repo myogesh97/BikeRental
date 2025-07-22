@@ -963,6 +963,101 @@
   margin-bottom: 2rem;
 }
 
+.blogs-section-shell .post-header {
+  height: 30rem;
+  background-image: linear-gradient(rgba(13, 13, 23, 0.7), rgba(13, 13, 23, 0.85)), url("https://images.unsplash.com/photo-1455849318743-b2233052fcff?q=80&w=2338&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+}
+.blogs-section-shell .post-header .post-meta {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1.3rem;
+}
+.blogs-section-shell .post-header .post-meta span {
+  font-size: 2rem;
+  font-size: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.blogs-section-shell .post-header h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin: 0;
+  color: #fff;
+}
+.blogs-section-shell .post-page-content {
+  padding: 4rem 0;
+}
+.blogs-section-shell .post-page-content .container {
+  max-width: 1040px;
+}
+.blogs-section-shell .post-content {
+  font-family: "Noto Sans", sans-serif;
+  color: #fff;
+}
+.blogs-section-shell .post-content h2,
+.blogs-section-shell .post-content h3 {
+  color: #e81837;
+  line-height: 1.2;
+  margin: 4rem 0 2rem;
+  border-bottom: 2px solid;
+  display: inline-block;
+}
+.blogs-section-shell .post-content h2 {
+  font-size: 2.5rem;
+}
+.blogs-section-shell .post-content h3 {
+  font-size: 2rem;
+}
+.blogs-section-shell .post-content p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+.blogs-section-shell .post-content a {
+  color: #e50000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.blogs-section-shell .post-content a:hover {
+  color: #fff;
+}
+.blogs-section-shell .post-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+.blogs-section-shell .post-content ul li {
+  padding-left: 2rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+.blogs-section-shell .post-content ul li::before {
+  content: "\f354";
+  font-family: "Ionicons";
+  position: absolute;
+  left: 0;
+  color: #e50000;
+}
+.blogs-section-shell .post-content blockquote {
+  border-left: 4px solid #e50000;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
 body.nav-open::before {
   content: "";
   position: fixed;
