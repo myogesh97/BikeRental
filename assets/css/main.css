@@ -746,12 +746,14 @@
 .page-hero h1 {
   color: #fff;
   font-size: 8rem;
+  text-transform: uppercase;
 }
 .page-hero .breadcrumb {
   --bs-breadcrumb-divider-color: #aaa;
   --bs-breadcrumb-item-active-color: #aaa;
   font-size: 2rem;
   letter-spacing: 1px;
+  text-transform: capitalize;
 }
 .page-hero .breadcrumb .breadcrumb-item a {
   color: #e50000;
@@ -902,6 +904,62 @@
   text-align: center;
   font-size: 0.9em;
   color: #6c757d;
+  margin-bottom: 2rem;
+}
+
+.aboutus-section .mission-grid {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.aboutus-section .mission-text {
+  flex: 1;
+}
+.aboutus-section .mission-text p {
+  font-family: "Noto Sans", sans-serif;
+  color: #c6c6c6;
+}
+.aboutus-section .mission-image {
+  flex: 1;
+}
+.aboutus-section .mission-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.aboutus-section .value-item {
+  text-align: center;
+  padding: 1.5rem;
+}
+.aboutus-section .value-item .icon {
+  font-size: 5rem;
+  color: #e50000;
+  margin-bottom: 1rem;
+  display: block;
+}
+.aboutus-section .value-item h3 {
+  font-size: 2.8rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+.aboutus-section .value-item p {
+  font-family: "Noto Sans", sans-serif;
+  color: #8e8e8e;
+}
+.aboutus-section .cta-section {
+  background-color: rgba(60, 60, 60, 0.3098039216);
+  padding: 6rem 1rem;
+  text-align: center;
+}
+.aboutus-section .cta-section h2 {
+  font-size: 3rem;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.aboutus-section .cta-section p {
+  color: #c6c6c6;
+  font-size: 4rem;
   margin-bottom: 2rem;
 }
 

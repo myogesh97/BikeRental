@@ -908,6 +908,7 @@
     h1 {
         color: #fff;
         font-size: 8rem;
+        text-transform: uppercase;
     }
 
     .breadcrumb {
@@ -915,6 +916,7 @@
         --bs-breadcrumb-item-active-color: #aaa;
         font-size: 2rem;
         letter-spacing: 1px;
+        text-transform: capitalize;
 
         .breadcrumb-item a {
             color: #e50000;
@@ -1099,5 +1101,75 @@
         font-size: 0.9em;
         color: #6c757d;
         margin-bottom: 2rem;
+    }
+}
+
+.aboutus-section {
+    .mission-grid {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .mission-text {
+        flex: 1;
+
+        p {
+            font-family: "Noto Sans", sans-serif;
+            color: #c6c6c6;
+        }
+    }
+
+    .mission-image {
+        flex: 1;
+
+        img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .value-item {
+        text-align: center;
+        padding: 1.5rem;
+
+        .icon {
+            font-size: 5rem;
+            color: #e50000;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        h3 {
+            font-size: 2.8rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-family: "Noto Sans", sans-serif;
+            color: #8e8e8e;
+        }
+    }
+
+
+    .cta-section {
+        background-color: #3c3c3c4f;
+        padding: 6rem 1rem;
+        text-align: center;
+
+        h2 {
+            font-size: 3rem;
+            color: #fff;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: #c6c6c6;
+            font-size: 4rem;
+            margin-bottom: 2rem;
+        }
     }
 }
