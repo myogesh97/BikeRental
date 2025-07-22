@@ -136,14 +136,14 @@
                         color: #fff;
                         text-transform: uppercase;
                         letter-spacing: 2px;
-                        margin-bottom: 4rem;
-                        font-size: 1.8rem;
+                        margin-bottom: 3rem;
+                        font-size: 2.2rem;
                     }
 
                     h1 {
                         text-transform: uppercase;
                         color: #fff;
-                        margin-bottom: 7rem;
+                        margin-bottom: 6rem;
                         font-weight: 600;
                         font-size: 8rem;
                     }
@@ -269,6 +269,7 @@
 
     .info-below-content {
         border-bottom: 2px solid red;
+        min-height: 38rem;
         margin: 0 5rem 0 6rem;
         padding: 4rem 0 6rem;
 
@@ -276,6 +277,7 @@
             color: #8e8e8e;
             font-family: "Noto Sans", sans-serif;
             font-size: 1.6rem;
+            margin-bottom: 1.2rem;
         }
 
         ul {
@@ -1031,6 +1033,14 @@
             color: #8e8e8e;
             font-family: "Noto Sans", sans-serif;
             font-size: 1.2rem;
+
+            a {
+                color: #fff;
+
+                &:hover {
+                    color: #e50000;
+                }
+            }
         }
 
         .form-check-input {
@@ -1047,5 +1057,47 @@
                 box-shadow: 0 0 0 0.25rem rgba(229, 0, 0, 0.25);
             }
         }
+    }
+}
+
+.terms-page {
+    font-family: "Noto Sans", sans-serif;
+    color: #c6c6c6;
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+
+    p,
+    li {
+        color: #c6c6c6;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    strong {
+        color: #fff;
+    }
+
+    h1 {
+        color: #fff;
+        text-align: center;
+        border-bottom: 2px solid #dee2e6;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        color: #fff;
+        margin-top: 2rem;
+        border-bottom: 1px solid #e9ecef;
+        padding-bottom: 0.3rem;
+    }
+
+    .last-updated {
+        text-align: center;
+        font-size: 0.9em;
+        color: #6c757d;
+        margin-bottom: 2rem;
     }
 }
