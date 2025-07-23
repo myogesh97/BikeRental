@@ -1973,7 +1973,7 @@ body.nav-open::before {
     padding: 3rem;
   }
   .testimonial-section .owl-carousel .text-content-shell p {
-    font-size: 1.6rem;
+    font-size: 1.6rem !important;
     -webkit-line-clamp: 5;
   }
   .testimonial-section .owl-carousel .owl-nav {
