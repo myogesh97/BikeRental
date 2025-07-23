@@ -410,6 +410,21 @@
         }
     }
 
+    .mission-section {
+        .mission-grid {
+            flex-direction: column-reverse;
+        }
+
+        .mission-text {
+            padding-right: 0 !important;
+        }
+    }
+
+    .aboutus-section .cta-section p {
+            font-size: 2.2rem;
+
+    }
+
 }
 
 /* Portrait */
