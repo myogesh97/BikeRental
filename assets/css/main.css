@@ -79,11 +79,6 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: translateY(0);
-  transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-.hero-bannerSection-Box .hero-bannerSection:hover .slide-background-image img {
-  transform: translateY(15px);
 }
 .hero-bannerSection-Box .hero-bannerSection .text-content-shell {
   position: absolute;
@@ -1708,7 +1703,7 @@ body.nav-open::before {
      768-480     - tablet 
      480-less    - phone landscape & smaller
   --------------------------------------------*/
-@media all and (max-width: 1024px) {
+@media all and (max-width: 1280px) {
   .hero-bannerSection .text-content-shell .text-content {
     padding: 4rem 10rem;
   }

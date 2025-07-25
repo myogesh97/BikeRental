@@ -100,10 +100,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   `;
   document.head.appendChild(style);
-});
 
-// Homepage Banner Slider
-document.addEventListener("DOMContentLoaded", () => {
+  // Homepage Banner Slider
   var heroSwiper = new Swiper(".hero-bannerSection", {
     loop: true,
     speed: 1000,
@@ -124,15 +122,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // BG Parallax
   document.addEventListener("scroll", function () {
-    const parallaxBackgrounds = document.querySelectorAll(
-      ".slide-background-image"
+    const slides = document.querySelectorAll(
+      ".hero-bannerSection .swiper-slide"
     );
 
-    parallaxBackgrounds.forEach((bg) => {
-      const rect = bg.getBoundingClientRect();
-      const transformValue = rect.top * -0.2;
+    slides.forEach((slide) => {
+      const bg = slide.querySelector(".slide-background-image");
+      const text = slide.querySelector(".text-content-shell");
+      const rect = slide.getBoundingClientRect();
+
       if (rect.top < window.innerHeight && rect.bottom > 0) {
-        bg.style.transform = `translateY(${transformValue}px)`;
+        if (bg) {
+          const bgTransformValue = rect.top * -0.2;
+          bg.style.transform = `translateY(${bgTransformValue}px)`;
+        }
+        if (text) {
+          const textTransformValue = rect.top * -0.4;
+          text.style.transform = `translateY(${textTransformValue}px)`;
+        }
       }
     });
   });
