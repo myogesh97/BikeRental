@@ -205,46 +205,20 @@ document.addEventListener("DOMContentLoaded", () => {
       prevEl: ".swiper-button-prev",
     },
   });
-});
 
-// Owl Slider JS
-$("#carousel2").owlCarousel({
-  autoplay: true,
-  rewind: false,
-  responsiveClass: true,
-  autoHeight: true,
-  autoplayTimeout: 2500,
-  smartSpeed: 1500,
-  nav: false,
-  items: 1,
-  lazyLoad: true,
-  navSpeed: 1000,
-  dots: false,
-  loop: true,
-  mouseDrag: true,
-  pullDrag: false,
-  touchDrag: false,
-  navText: [
-    "<ion-icon name='chevron-back-outline'></ion-icon>",
-    "<ion-icon name='chevron-forward-outline'></ion-icon>",
-  ],
-  responsive: {
-    0: {
-      items: 2,
+  // Image Slider Only
+  var testimonialSwiper = new Swiper(".imageOnly-slider", {
+    loop: true,
+    speed: 1000,
+    // allowTouchMove: false,
+    freeMode: true,
+    autoplay: {
+      delay: 2500,
     },
+    slidesPerView: 7,
+    speed: 1000,
+  });
 
-    576: {
-      items: 2,
-    },
-
-    1024: {
-      items: 5,
-    },
-
-    1366: {
-      items: 6,
-    },
-  },
 });
 
 // Stats Js

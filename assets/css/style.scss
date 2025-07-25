@@ -573,14 +573,13 @@ footer {
 
 // Image Slider Section
 .image-slider-only {
-    .owl-item {
-        .item {
-            height: 25rem;
-        }
+    .swiper-slide {
+        height: 25rem;
 
         img {
             height: 100%;
             object-fit: cover;
+            width: 100%;
         }
     }
 }

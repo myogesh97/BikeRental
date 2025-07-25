@@ -466,12 +466,13 @@ footer {
   }
 }
 
-.image-slider-only .owl-item .item {
+.image-slider-only .swiper-slide {
   height: 25rem;
 }
-.image-slider-only .owl-item img {
+.image-slider-only .swiper-slide img {
   height: 100%;
   object-fit: cover;
+  width: 100%;
 }
 
 .site-footer {
