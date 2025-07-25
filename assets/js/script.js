@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fadeEffect: {
       crossFade: true,
     },
-    speed: 1800,
+    speed: 2000,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
