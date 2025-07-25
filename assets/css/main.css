@@ -1863,11 +1863,12 @@ body.nav-open::before {
     padding-top: 0;
   }
   .hero-bannerSection-Box .hero-bannerSection {
-    height: 750px;
+    height: 100vh;
   }
   .hero-bannerSection-Box .hero-bannerSection .text-content-shell .text-content {
     padding: 4rem;
     text-align: center;
+    transform: translate(0px, 4rem);
   }
   .hero-bannerSection-Box .hero-bannerSection .text-content-shell .text-content h1 {
     font-size: 6rem;
