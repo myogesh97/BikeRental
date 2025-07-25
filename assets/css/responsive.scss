@@ -221,18 +221,31 @@
 
     .hero-bannerSection-Box {
         padding-top: 0;
-    }
 
-    .hero-bannerSection {
-        height: 750px;
+        .hero-bannerSection {
+            height: 750px;
 
-        .text-content-shell .text-content {
-            padding: 4rem;
-            text-align: center;
+            .text-content-shell .text-content {
+                padding: 4rem;
+                text-align: center;
 
-            h1 {
-                font-size: 6rem;
-                margin-bottom: 4rem;
+                h1 {
+                    font-size: 6rem;
+                    margin-bottom: 4rem;
+                }
+            }
+        }
+
+        .s-button_box {
+            height: 3rem;
+            width: 3rem;
+
+            &.swiper-button-next {
+                right: 1rem;
+            }
+
+            &.swiper-button-prev {
+                left: 1rem;
             }
         }
     }
@@ -408,7 +421,7 @@
     }
 
     .aboutus-section .cta-section p {
-            font-size: 2.2rem;
+        font-size: 2.2rem;
 
     }
 

@@ -1115,7 +1115,6 @@ body.nav-open::before {
   justify-content: space-between;
   padding: 1rem;
   align-items: center;
-  -webkit-backdrop-filter: saturate(180%) blur(10px);
   transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1863,16 +1862,26 @@ body.nav-open::before {
   .hero-bannerSection-Box {
     padding-top: 0;
   }
-  .hero-bannerSection {
+  .hero-bannerSection-Box .hero-bannerSection {
     height: 750px;
   }
-  .hero-bannerSection .text-content-shell .text-content {
+  .hero-bannerSection-Box .hero-bannerSection .text-content-shell .text-content {
     padding: 4rem;
     text-align: center;
   }
-  .hero-bannerSection .text-content-shell .text-content h1 {
+  .hero-bannerSection-Box .hero-bannerSection .text-content-shell .text-content h1 {
     font-size: 6rem;
     margin-bottom: 4rem;
+  }
+  .hero-bannerSection-Box .s-button_box {
+    height: 3rem;
+    width: 3rem;
+  }
+  .hero-bannerSection-Box .s-button_box.swiper-button-next {
+    right: 1rem;
+  }
+  .hero-bannerSection-Box .s-button_box.swiper-button-prev {
+    left: 1rem;
   }
   .section-primary_title h2 {
     font-size: 6rem;
