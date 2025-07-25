@@ -1709,7 +1709,7 @@ body.nav-open::before {
      480-less    - phone landscape & smaller
   --------------------------------------------*/
 @media all and (max-width: 1024px) {
-  .owl-carousel.hero-bannerSection .item .text-content-shell .text-content {
+  .hero-bannerSection .text-content-shell .text-content {
     padding: 4rem 10rem;
   }
 }
