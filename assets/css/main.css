@@ -1348,7 +1348,7 @@ body.nav-open::before {
 }
 .product-detail-section .gallery-slider .swiper-slide {
   width: auto;
-  height: 400px;
+  height: 430px;
 }
 .product-detail-section .gallery-slider .swiper-slide img {
   display: block;
