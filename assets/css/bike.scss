@@ -5,7 +5,7 @@
     .gallery {
         width: 100%;
         max-width: 620px;
-        margin: 40px auto;
+        margin: 2rem auto;
 
         &-slider {
             width: 100%;
@@ -27,19 +27,21 @@
         }
 
         &-thumbs {
-            width: 100%;
-            padding: 0;
+            height: 100%; 
+            box-sizing: border-box;
             overflow: hidden;
+            padding: 10px 0;
 
             .swiper-slide {
-                width: 100px;
-                height: 100px;
-                text-align: center;
-                overflow: hidden;
-                opacity: .1;
+                width: 10rem;
+                height: 10rem;
+                opacity: 0.1;
+                cursor: pointer;
+                transition: opacity 0.3s ease;
 
-                &-active {
+                &.swiper-slide-thumb-active {
                     opacity: 1;
+                    border: 1px solid #e81938;
                 }
 
                 img {

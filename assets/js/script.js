@@ -7,15 +7,14 @@ AOS.init({
   // disableMutationObserver: false, // disables automatic mutations' detections (advanced)
   // debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
   // throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-  
 
   // offset: 120, // offset (in px) from the original trigger point
   // delay: 0, // values from 0 to 3000, with step 50ms
   // duration: 400, // values from 0 to 3000, with step 50ms
-  easing: 'ease', // default easing for AOS animations
+  easing: "ease", // default easing for AOS animations
   once: true, // whether animation should happen only once - while scrolling down
   // mirror: false, // whether elements should animate out while scrolling past them
-  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+  anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -103,72 +102,89 @@ document.addEventListener("DOMContentLoaded", () => {
   document.head.appendChild(style);
 });
 
-// Owl Slider JS
-
-$("#carousel").owlCarousel({
-  autoplay: true,
-  rewind: false,
-  animateOut: "fadeOut",
-  animateIn: "fadeIn",
-  responsiveClass: true,
-  autoHeight: true,
-  autoplayTimeout: 5000,
-  smartSpeed: 1000,
-  nav: true,
-  items: 1,
-  navSpeed: 1000,
-  lazyLoad: true,
-  loop: true,
-  dots: false,
-  mouseDrag: false,
-  pullDrag: false,
-  touchDrag: false,
-  navText: [
-    "<ion-icon name='chevron-back-outline'></ion-icon>",
-    "<ion-icon name='chevron-forward-outline'></ion-icon>",
-  ],
-  responsive: {
-    0: {
-      items: 1,
+// Homepage Banner Slider
+document.addEventListener("DOMContentLoaded", () => {
+  var heroSwiper = new Swiper(".hero-bannerSection", {
+    loop: true,
+    speed: 1000,
+    allowTouchMove: false,
+    autoplay: {
+      delay: 5000,
     },
-
-    600: {
-      items: 1,
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
     },
-
-    1024: {
-      items: 1,
+    speed: 1800,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
+  });
 
-    1366: {
-      items: 1,
-    },
-  },
-});
+  // BG Parallax
+  document.addEventListener("scroll", function () {
+    const parallaxBackgrounds = document.querySelectorAll(
+      ".slide-background-image"
+    );
 
-document.addEventListener("scroll", () => {
-  const items = document.querySelectorAll(
-    ".hero-bannerSection-Box .owl-carousel .item"
-  );
-
-  items.forEach((item) => {
-    const img = item.querySelector("img");
-    if (img) {
-      const scrollY = window.scrollY;
-      const offsetTop = item.offsetTop;
-      const height = item.offsetHeight;
-      const inView =
-        scrollY + window.innerHeight > offsetTop &&
-        scrollY < offsetTop + height;
-
-      if (inView) {
-        const percent = (scrollY - offsetTop) / height;
-        img.style.transform = `translateY(${percent * 150}px)`; // adjust strength here
+    parallaxBackgrounds.forEach((bg) => {
+      const rect = bg.getBoundingClientRect();
+      const transformValue = rect.top * -0.2;
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        bg.style.transform = `translateY(${transformValue}px)`;
       }
-    }
+    });
+  });
+
+  // Text Content Parallax
+  document.addEventListener("scroll", function () {
+    const slides = document.querySelectorAll(
+      ".hero-bannerSection .swiper-slide"
+    );
+
+    slides.forEach((slide) => {
+      const textContent = slide.querySelector(".text-content-shell");
+
+      if (textContent) {
+        const rect = slide.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        if (rect.top < windowHeight && rect.bottom > 0) {
+          const slideCenter = rect.top + rect.height / 2;
+          const screenCenter = windowHeight / 2;
+          const distanceFromCenter = slideCenter - screenCenter;
+          const transformValue = distanceFromCenter * -0.3;
+
+          textContent.style.transform = `translateY(${transformValue}px)`;
+        }
+      }
+    });
+  });
+
+  // Bike Slider Section
+  var thumbsSwiper = new Swiper(".gallery-thumbs", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+
+  var mainSwiper = new Swiper(".gallery-slider", {
+    loop: true,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: thumbsSwiper,
+    },
   });
 });
 
+// Owl Slider JS
 $("#carousel1").owlCarousel({
   autoplay: false,
   rewind: false,
@@ -257,7 +273,6 @@ $("#carousel2").owlCarousel({
 });
 
 // Stats Js
-
 document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".stat-number");
   const speed = 200; // The lower the number, the faster the count
@@ -299,7 +314,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Scroll To Top JS
-
 document.addEventListener("DOMContentLoaded", () => {
   const scrollToTopButton = document.querySelector(".scroll-to-top-button");
 
@@ -376,7 +390,6 @@ function updateListingToolbar() {
   const resultsCount = document.getElementById("resultsCount");
   const viewPage = document.getElementById("viewPage");
 
-  // ✅ Safeguard: Only run if both elements exist
   if (!resultsCount || !viewPage) return;
 
   const allCards = document.querySelectorAll(".motorcycle-card");
@@ -399,22 +412,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Run on load
 updateListingToolbar();
-
-// Swiper Fix
-
-const mainSlider = document.querySelector(".main-slider");
-const thumbSlider = document.querySelector(".thumb-slider");
-
-if (mainSlider && thumbSlider) {
-  new Swiper(mainSlider, {
-    spaceBetween: 10,
-    thumbs: {
-      swiper: new Swiper(thumbSlider, {
-        slidesPerView: 4,
-        spaceBetween: 10,
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
-      }),
-    },
-  });
-}

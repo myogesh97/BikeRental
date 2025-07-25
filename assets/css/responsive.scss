@@ -45,9 +45,9 @@
         }
     }
 
-    .owl-carousel.hero-bannerSection {
+    .hero-bannerSection {
 
-        .item .text-content-shell .text-content {
+        .text-content-shell .text-content {
             padding: 4rem;
             text-align: center;
         }
@@ -223,10 +223,10 @@
         padding-top: 0;
     }
 
-    .owl-carousel.hero-bannerSection {
+    .hero-bannerSection {
         height: 750px;
 
-        .item .text-content-shell .text-content {
+        .text-content-shell .text-content {
             padding: 4rem;
             text-align: center;
 
@@ -234,21 +234,6 @@
                 font-size: 6rem;
                 margin-bottom: 4rem;
             }
-        }
-
-        .owl-nav button.owl-prev,
-        .owl-nav button.owl-next {
-            font-size: 4rem;
-            height: 5rem;
-            width: 5rem;
-        }
-
-        .owl-nav button.owl-prev {
-            left: 0rem;
-        }
-
-        .owl-nav button.owl-next {
-            right: 0rem;
         }
     }
 

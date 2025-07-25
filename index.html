@@ -15,7 +15,9 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'>
     <link rel='stylesheet'
         href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.theme.default.min.css'>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css'>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
@@ -122,43 +124,47 @@
 
     <!-- Hero Banner -->
     <section class="owl-slider hero-bannerSection-Box">
-        <div id="carousel" class="owl-carousel hero-bannerSection">
-            <div class="item">
-                <div class="parallax-image">
-                    <img class="owl-lazy" data-src="https://demo2.wpopal.com/lexrider/wp-content/uploads/2019/04/rev_slidehome1_1.jpg" src="https://demo2.wpopal.com/lexrider/wp-content/uploads/2019/04/rev_slidehome1_1.jpg" alt="rev_slidehome1_1">
+        <div class="swiper hero-bannerSection hero-parallax-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slide-background-image">
+                        <img src="https://demo2.wpopal.com/lexrider/wp-content/uploads/2019/04/rev_slidehome1_1.jpg" alt="Motorcycle Banner">
+                    </div>
+                    <div class="text-content-shell">
+                        <div class="text-content">
+                            <p class="animate__animated animate__bounce">UNLOCK THE SEVEN SISTERS</p>
+                            <h1 class="animate__animated animate__bounce animate__fast">Experience Pure <br> Freedom</h1>
+                            <a href="bike-shop.html" class="btn btn-primary animate__animated animate__bounce animate__faster">CHOOSE YOUR BIKE</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="text-content-shell">
-                    <div class="text-content">
-                        <p class="animate__animated animate__bounce">UNLOCK THE SEVEN SISTERS</p>
-                        <h1 class="animate__animated animate__bounce animate__fast">Experience Pure <br> Freedom</h1>
-                        <a href="bike-shop.html" class="btn btn-primary animate__animated animate__bounce animate__faster">CHOOSE YOUR BIKE</a>
+                <div class="swiper-slide">
+                    <div class="slide-background-image">
+                        <img src="https://demo2.wpopal.com/lexrider/wp-content/uploads/2019/04/rev_slidehome1_2.jpg" alt="Motorcycle Banner">
+                    </div>
+                    <div class="text-content-shell">
+                        <div class="text-content">
+                            <p class="animate__animated animate__bounce">MORE THAN A RENTAL, IT'S A BROTHERHOOD</p>
+                            <h1 class="animate__animated animate__bounce animate__fast">Quality Rides, <br> Guaranteed</h1>
+                            <a href="bike-shop.html" class="btn btn-primary">RIDE WITH US</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-background-image">
+                        <img src="https://demo2.wpopal.com/lexrider/wp-content/uploads/2019/04/rev_slidehome1_3.jpg" alt="Motorcycle Banner">
+                    </div>
+                    <div class="text-content-shell">
+                        <div class="text-content">
+                            <p class="animate__animated animate__bounce">RELIABILITY FOR EVERY ROAD</p>
+                            <h1 class="animate__animated animate__bounce animate__fast">Experience the <br> Difference</h1>
+                            <a href="bike-shop.html" class="btn btn-primary animate__animated animate__bounce animate__faster">OUR SERVICES</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="item">
-                <div class="parallax-image">
-                    <img class="owl-lazy" data-src="https://demo2.wpopal.com/lexrider/wp-content/uploads/2019/04/rev_slidehome1_2.jpg" src="https://demo2.wpopal.com/lexrider/wp-content/uploads/2019/04/rev_slidehome1_2.jpg" alt="rev_slidehome1_2">
-                </div>
-                <div class="text-content-shell">
-                    <div class="text-content">
-                        <p class="animate__animated animate__bounce">MORE THAN A RENTAL, IT'S A BROTHERHOOD</p>
-                        <h1 class="animate__animated animate__bounce animate__fast">Quality Rides, <br> Guaranteed</h1>
-                        <a href="bike-shop.html" class="btn btn-primary">RIDE WITH US</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="parallax-image">
-                    <img class="owl-lazy" data-src="https://demo2.wpopal.com/lexrider/wp-content/uploads/2019/04/rev_slidehome1_3.jpg" src="https://demo2.wpopal.com/lexrider/wp-content/uploads/2019/04/rev_slidehome1_3.jpg" alt="rev_slidehome1_3">
-                </div>
-                <div class="text-content-shell">
-                    <div class="text-content">
-                        <p class="animate__animated animate__bounce">RELIABILITY FOR EVERY ROAD</p>
-                        <h1 class="animate__animated animate__bounce animate__fast">Experience the <br> Difference</h1>
-                        <a href="bike-shop.html" class="btn btn-primary animate__animated animate__bounce animate__faster">OUR SERVICES</a>
-                    </div>
-                </div>
-            </div>
+            <div class="swiper-button-prev s-button_box"><i class="fa-solid fa-chevron-left"></i></div>
+            <div class="swiper-button-next s-button_box"><i class="fa-solid fa-chevron-right"></i></div>
         </div>
     </section>
 
@@ -598,12 +604,12 @@
     <!-- Bootstrap Bundle JS (with Popper) -->
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <!-- <script src="assets/js/jquery.min.js"></script> -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://kit.fontawesome.com/7c61365257.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </body>
