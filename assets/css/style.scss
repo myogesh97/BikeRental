@@ -309,11 +309,8 @@ footer {
         }
     }
 
-    .owl-stage-outer {
+    .testimonial-slider {
         background-color: #fff;
-    }
-
-    .owl-carousel {
         max-width: 97rem;
         margin-right: 0;
         margin-bottom: -26rem;
@@ -367,33 +364,36 @@ footer {
             }
         }
 
-        .owl-nav {
-            button {
-                border: 2px solid #000;
-                color: #000;
-                height: 6rem;
-                width: 6rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 2.6rem;
-                transform: initial;
-                top: initial;
-                bottom: 6.5rem;
-                background-color: #fff;
-
-                &:hover {
-                    color: #c40000;
-                    border-color: #c40000;
-                }
+        .s-button_box {
+            &::after {
+                content: none;
             }
 
-            .owl-prev {
+            border: 2px solid #000;
+            color: #000;
+            height: 6rem;
+            width: 6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: initial;
+            top: initial;
+            padding: 1rem;
+            bottom: 6.5rem;
+            background-color: #fff;
+            transition: .3s all;
+
+            &:hover {
+                color: #c40000;
+                border-color: #c40000;
+            }
+
+            &.swiper-button-prev {
                 left: initial;
                 right: 16.5rem;
             }
 
-            .owl-next {
+            &.swiper-button-next {
                 right: 10rem;
             }
         }

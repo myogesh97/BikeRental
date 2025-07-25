@@ -189,57 +189,25 @@ document.addEventListener("DOMContentLoaded", () => {
       swiper: thumbsSwiper,
     },
   });
+
+  // Testimonial Slider
+  var testimonialSwiper = new Swiper(".testimonial-slider", {
+    loop: true,
+    speed: 1000,
+    allowTouchMove: false,
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
+    speed: 1000,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 });
 
 // Owl Slider JS
-$("#carousel1").owlCarousel({
-  autoplay: false,
-  rewind: false,
-  responsiveClass: true,
-  autoHeight: true,
-  autoplayTimeout: 5000,
-  smartSpeed: 3000,
-  nav: true,
-  items: 1,
-  navSpeed: 1000,
-  lazyLoad: true,
-  dots: false,
-  loop: true,
-  mouseDrag: true,
-  pullDrag: false,
-  touchDrag: false,
-  navText: [
-    "<ion-icon name='chevron-back-outline'></ion-icon>",
-    "<ion-icon name='chevron-forward-outline'></ion-icon>",
-  ],
-  responsive: {
-    0: {
-      items: 1,
-      autoplay: true,
-      mouseDrag: true,
-      pullDrag: true,
-      touchDrag: true,
-    },
-
-    576: {
-      items: 1,
-      autoplay: true,
-      mouseDrag: true,
-      pullDrag: true,
-      touchDrag: true,
-    },
-
-    1024: {
-      items: 1,
-      autoplay: true,
-    },
-
-    1366: {
-      items: 1,
-    },
-  },
-});
-
 $("#carousel2").owlCarousel({
   autoplay: true,
   rewind: false,

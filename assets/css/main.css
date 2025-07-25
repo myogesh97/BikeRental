@@ -244,18 +244,16 @@ footer {
   font-size: 1.8rem;
   text-transform: uppercase;
 }
-.testimonial-section .owl-stage-outer {
+.testimonial-section .testimonial-slider {
   background-color: #fff;
-}
-.testimonial-section .owl-carousel {
   max-width: 97rem;
   margin-right: 0;
   margin-bottom: -26rem;
 }
-.testimonial-section .owl-carousel .text-content-shell {
+.testimonial-section .testimonial-slider .text-content-shell {
   padding: 7rem 10rem;
 }
-.testimonial-section .owl-carousel .text-content-shell p {
+.testimonial-section .testimonial-slider .text-content-shell p {
   margin: 0;
   font-family: "Noto Sans", sans-serif;
   font-size: 2.4rem;
@@ -267,33 +265,33 @@ footer {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.testimonial-section .owl-carousel .text-content-shell .t-user-info {
+.testimonial-section .testimonial-slider .text-content-shell .t-user-info {
   display: flex;
   align-items: center;
   margin-top: 5.5rem;
 }
-.testimonial-section .owl-carousel .text-content-shell .t-user-info i {
+.testimonial-section .testimonial-slider .text-content-shell .t-user-info i {
   height: 6rem;
   width: 6rem;
   display: inline-block;
   margin-right: 2rem;
 }
-.testimonial-section .owl-carousel .text-content-shell .t-user-info i img {
+.testimonial-section .testimonial-slider .text-content-shell .t-user-info i img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-.testimonial-section .owl-carousel .text-content-shell .t-user-info p {
+.testimonial-section .testimonial-slider .text-content-shell .t-user-info p {
   font-family: "Teko", sans-serif;
   line-height: initial;
   font-size: 3rem;
 }
-.testimonial-section .owl-carousel .text-content-shell .t-user-info span {
+.testimonial-section .testimonial-slider .text-content-shell .t-user-info span {
   font-size: 1.8rem;
   color: #131313;
   text-transform: uppercase;
 }
-.testimonial-section .owl-carousel .owl-nav button {
+.testimonial-section .testimonial-slider .s-button_box {
   border: 2px solid #000;
   color: #000;
   height: 6rem;
@@ -301,21 +299,25 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.6rem;
   transform: initial;
   top: initial;
+  padding: 1rem;
   bottom: 6.5rem;
   background-color: #fff;
+  transition: 0.3s all;
 }
-.testimonial-section .owl-carousel .owl-nav button:hover {
+.testimonial-section .testimonial-slider .s-button_box::after {
+  content: none;
+}
+.testimonial-section .testimonial-slider .s-button_box:hover {
   color: #c40000;
   border-color: #c40000;
 }
-.testimonial-section .owl-carousel .owl-nav .owl-prev {
+.testimonial-section .testimonial-slider .s-button_box.swiper-button-prev {
   left: initial;
   right: 16.5rem;
 }
-.testimonial-section .owl-carousel .owl-nav .owl-next {
+.testimonial-section .testimonial-slider .s-button_box.swiper-button-next {
   right: 10rem;
 }
 
