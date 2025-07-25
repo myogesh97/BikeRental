@@ -267,6 +267,7 @@ footer {
   font-style: italic;
   color: #131313;
   display: -webkit-box;
+  line-clamp: 3;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -1917,6 +1918,7 @@ body.nav-open::before {
   .testimonial-section .owl-carousel .text-content-shell p {
     font-size: 1.6rem !important;
     -webkit-line-clamp: 5;
+    line-clamp: 5;
   }
   .testimonial-section .owl-carousel .owl-nav {
     display: none;
