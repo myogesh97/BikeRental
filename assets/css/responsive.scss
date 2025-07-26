@@ -307,19 +307,30 @@
             text-align: center;
         }
 
-        .owl-carousel {
+        .testimonial-slider {
             .text-content-shell {
                 padding: 3rem;
 
                 p {
                     font-size: 1.6rem !important;
-                    -webkit-line-clamp: 5;
-                    line-clamp: 5;
+                    -webkit-line-clamp: 4;
+                    line-clamp: 4;
                 }
             }
 
-            .owl-nav {
-                display: none;
+            .s-button_box {
+                height: 4rem;
+                width: 4rem;
+                padding: .5rem;
+                bottom: 4.5rem;
+
+                &.swiper-button-next {
+                    right: 7rem;
+                }
+
+                &.swiper-button-prev {
+                    right: 11.5rem;
+                }
             }
         }
     }

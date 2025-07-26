@@ -1919,16 +1919,25 @@ body.nav-open::before {
   .testimonial-section .section-primary_title {
     text-align: center;
   }
-  .testimonial-section .owl-carousel .text-content-shell {
+  .testimonial-section .testimonial-slider .text-content-shell {
     padding: 3rem;
   }
-  .testimonial-section .owl-carousel .text-content-shell p {
+  .testimonial-section .testimonial-slider .text-content-shell p {
     font-size: 1.6rem !important;
-    -webkit-line-clamp: 5;
-    line-clamp: 5;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
   }
-  .testimonial-section .owl-carousel .owl-nav {
-    display: none;
+  .testimonial-section .testimonial-slider .s-button_box {
+    height: 4rem;
+    width: 4rem;
+    padding: 0.5rem;
+    bottom: 4.5rem;
+  }
+  .testimonial-section .testimonial-slider .s-button_box.swiper-button-next {
+    right: 7rem;
+  }
+  .testimonial-section .testimonial-slider .s-button_box.swiper-button-prev {
+    right: 11.5rem;
   }
   .our-team-section {
     padding-top: 25rem;
