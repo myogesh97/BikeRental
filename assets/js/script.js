@@ -210,12 +210,13 @@ document.addEventListener("DOMContentLoaded", () => {
   var testimonialSwiper = new Swiper(".imageOnly-slider", {
     loop: true,
     speed: 1000,
-    allowTouchMove: false,
+    // allowTouchMove: false,
     // freeMode: true,
     autoplay: {
       delay: 2500,
+      disableOnInteraction: false,
     },
-    slidesPerView: 7,
+    slidesPerView: 5,
     speed: 1000,
   });
 
