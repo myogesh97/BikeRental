@@ -699,6 +699,7 @@ footer {
                     text-decoration: none;
                     transition: color 0.3s ease;
                     font-family: "Noto Sans", sans-serif;
+                    text-transform: capitalize;
 
                     &:hover {
                         color: #fff;
@@ -1003,7 +1004,9 @@ footer {
 }
 
 .terms-page,
-.privacy-page {
+.privacy-page,
+.charges-policy-page,
+.delivery-policy-page {
     font-family: "Noto Sans", sans-serif;
     color: #c6c6c6;
     font-size: 1.6rem;

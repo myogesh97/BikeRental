@@ -579,6 +579,7 @@ footer {
   text-decoration: none;
   transition: color 0.3s ease;
   font-family: "Noto Sans", sans-serif;
+  text-transform: capitalize;
 }
 .site-footer .footer-main .quick-links li a:hover {
   color: #fff;
@@ -827,7 +828,9 @@ footer {
 }
 
 .terms-page,
-.privacy-page {
+.privacy-page,
+.charges-policy-page,
+.delivery-policy-page {
   font-family: "Noto Sans", sans-serif;
   color: #c6c6c6;
   font-size: 1.6rem;
@@ -836,19 +839,29 @@ footer {
 .terms-page p,
 .terms-page li,
 .privacy-page p,
-.privacy-page li {
+.privacy-page li,
+.charges-policy-page p,
+.charges-policy-page li,
+.delivery-policy-page p,
+.delivery-policy-page li {
   color: #c6c6c6;
 }
 .terms-page ul,
-.privacy-page ul {
+.privacy-page ul,
+.charges-policy-page ul,
+.delivery-policy-page ul {
   padding-left: 20px;
 }
 .terms-page strong,
-.privacy-page strong {
+.privacy-page strong,
+.charges-policy-page strong,
+.delivery-policy-page strong {
   color: #fff;
 }
 .terms-page h1,
-.privacy-page h1 {
+.privacy-page h1,
+.charges-policy-page h1,
+.delivery-policy-page h1 {
   color: #fff;
   text-align: center;
   border-bottom: 2px solid #dee2e6;
@@ -856,21 +869,27 @@ footer {
   margin-bottom: 1rem;
 }
 .terms-page h2,
-.privacy-page h2 {
+.privacy-page h2,
+.charges-policy-page h2,
+.delivery-policy-page h2 {
   color: #fff;
   margin-top: 2rem;
   border-bottom: 1px solid #e9ecef;
   padding-bottom: 0.3rem;
 }
 .terms-page .last-updated,
-.privacy-page .last-updated {
+.privacy-page .last-updated,
+.charges-policy-page .last-updated,
+.delivery-policy-page .last-updated {
   text-align: center;
   font-size: 0.9em;
   color: #6c757d;
   margin-bottom: 2rem;
 }
 .terms-page a,
-.privacy-page a {
+.privacy-page a,
+.charges-policy-page a,
+.delivery-policy-page a {
   color: #e50000;
 }
 
@@ -2183,10 +2202,12 @@ textarea.form-control {
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
+  appearance: none;
   margin: 0;
 }
 
 input[type=number] {
+  appearance: textfield;
   -moz-appearance: textfield;
 }
 
