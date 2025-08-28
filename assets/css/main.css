@@ -315,7 +315,7 @@ footer {
 }
 .testimonial-section .testimonial-slider .s-button_box.swiper-button-prev {
   left: initial;
-  right: 16.5rem;
+  right: 17rem;
 }
 .testimonial-section .testimonial-slider .s-button_box.swiper-button-next {
   right: 10rem;
@@ -394,14 +394,14 @@ footer {
   font-size: 1.6rem;
   text-decoration: none;
 }
-.our-team-section .profile-card:hover .card-overlay {
+.our-team-section .profile-card:hover .card-overlay, .our-team-section .profile-card:focus .card-overlay, .our-team-section .profile-card:has(.social-links a:focus) .card-overlay {
   opacity: 1;
 }
-.our-team-section .profile-card:hover .card-content .social-links {
+.our-team-section .profile-card:hover .card-content .social-links, .our-team-section .profile-card:focus .card-content .social-links, .our-team-section .profile-card:has(.social-links a:focus) .card-content .social-links {
   max-height: 50px;
   opacity: 1;
 }
-.our-team-section .profile-card:hover img {
+.our-team-section .profile-card:hover img, .our-team-section .profile-card:focus img, .our-team-section .profile-card:has(.social-links a:focus) img {
   transform: scale(1.08);
 }
 
@@ -1203,7 +1203,7 @@ body.nav-open::before {
   color: #ffffff;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  border-radius: 12px;
+  border-radius: 2px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
@@ -2103,12 +2103,6 @@ a:focus {
   color: #e81938;
 }
 
-.btn.focus,
-.btn:focus {
-  outline: 0;
-  box-shadow: none;
-}
-
 button:hover,
 button:focus,
 input:hover,
@@ -2152,10 +2146,33 @@ ul {
   background-color: #e81938;
   color: #fff;
 }
-.btn:hover {
-  border-color: #e81938;
-  background-color: #fff;
-  color: #e81938;
+.btn:hover, .btn:focus {
+  border-color: #e81938 !important;
+  background-color: #fff !important;
+  color: #e81938 !important;
+}
+
+button:focus-visible,
+input[type=button]:focus-visible,
+input[type=submit]:focus-visible,
+.nav-buttonLink a:focus-visible,
+.scroll-to-top-button:focus-visible,
+a.map-link:focus-visible,
+a:focus-visible,
+.s-button_box:focus-visible,
+select:focus-visible,
+button:focus,
+input[type=button]:focus,
+input[type=submit]:focus,
+.nav-buttonLink a:focus,
+.scroll-to-top-button:focus,
+a.map-link:focus,
+a:focus,
+.s-button_box:focus,
+select:focus {
+  outline: 2px dotted #afafaf !important;
+  outline-offset: 3px !important;
+  box-shadow: none !important;
 }
 
 .btn-check:checked + .btn,

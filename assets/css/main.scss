@@ -25,6 +25,7 @@ body {
     font-family: "Teko", sans-serif;
     font-optical-sizing: auto;
 }
+
 main {
     padding-top: 14.6rem;
 }
@@ -48,12 +49,6 @@ a:focus {
     color: #e81938;
 }
 
-.btn.focus,
-.btn:focus {
-    outline: 0;
-    box-shadow: none;
-}
-
 button:hover,
 button:focus,
 input:hover,
@@ -65,7 +60,7 @@ textarea:focus {
 }
 
 textarea.form-control {
-  min-height: 110px;
+    min-height: 110px;
 }
 
 h1,
@@ -97,11 +92,35 @@ ul {
     background-color: #e81938;
     color: #fff;
 
-    &:hover {
-        border-color: #e81938;
-        background-color: #fff;
-        color: #e81938;
+    &:hover,
+    &:focus {
+        border-color: #e81938 !important;
+        background-color: #fff !important;
+        color: #e81938 !important;
     }
+}
+
+button:focus-visible,
+input[type="button"]:focus-visible,
+input[type="submit"]:focus-visible,
+.nav-buttonLink a:focus-visible,
+.scroll-to-top-button:focus-visible,
+a.map-link:focus-visible,
+a:focus-visible,
+.s-button_box:focus-visible,
+select:focus-visible,
+button:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus,
+.nav-buttonLink a:focus,
+.scroll-to-top-button:focus,
+a.map-link:focus,
+a:focus,
+.s-button_box:focus,
+select:focus {
+    outline: 2px dotted #afafaf !important;
+    outline-offset: 3px !important;
+    box-shadow: none !important;
 }
 
 .btn-check:checked+.btn,

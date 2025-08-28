@@ -390,7 +390,7 @@ footer {
 
             &.swiper-button-prev {
                 left: initial;
-                right: 16.5rem;
+                right: 17rem;
             }
 
             &.swiper-button-next {
@@ -482,8 +482,10 @@ footer {
                 }
             }
         }
-
-        &:hover {
+    
+        &:hover,
+        &:focus,
+        &:has(.social-links a:focus) {
 
             .card-overlay {
                 opacity: 1;
